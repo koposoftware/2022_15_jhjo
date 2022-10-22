@@ -77,9 +77,9 @@
 <br>
 
 ## 카드의 혜택 계산<br>
-<div style="display:flex; align-items: center; margin-left:80px;">
-<img src="oracle_view.png" style="width:220px; height:200px; margin:5px;"> 
-<img src="oracle.png" style="width:200px; margin:5px;"> 
+<div style="display:flex; align-items: center; margin-left:120px;">
+<img src="oracle_view.png" style="width:300px; height:200px; margin:5px;"> 
+<img src="oracle.png" style="width:300px; margin:5px;"> 
 </div> 
 <br>
  서브쿼리, 조인 등으로 복잡한 쿼리문들을 VIEW로 생성해 간단하게 만들고, ORACLE의 PROCEDURE와 CURSOR, FUNCTION, 임시 테이블을 활용해 카드 사용 시 혜택을 계산하도록 구현했습니다. CURSOR로 소비데이터들을 가져와 PROCEDURE 내에서 FUNCTION을 호출하고 혜택을 계산해 REF CURSOR를 통해 결과값들을 웹으로 가져와 사용했습니다. 
