@@ -141,11 +141,14 @@
 *   개인 맞춤 카드 추천
 <br>
       <img src="tech1.png" style="width:500px; margin-left:140px;">
+      <hr>
       <img src="tech2.png" style="width:500px; margin-left:140px;">
+      <hr>
       <img src="tech16.png" style="margin-left:40px;">
 <div>
-      <img src="tech17.png">
-      <img src="tech18.png">
+      <img src="tech17.png" style="margin-left:40px;">
+      <hr>
+      <img src="tech18.png" style="margin-left:40px;">
 </div>
 
  손님은 3개월 치 소비데이터를 기반으로 신용 카드, 체크 카드, 멀티
