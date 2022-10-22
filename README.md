@@ -1,13 +1,15 @@
 # 마이데이터 기반 카드 추천 서비스
 
-HANA FINDER
+<img src="logo.png">
+<br>
+<br>
 
 [프로젝트 홈페이지 - https://koposoftware.github.io/2022_15_jhjo/](https://koposoftware.github.io/2022_15_jhjo/)
 
 # 1. 프로젝트 배경 및 목적
 
 #  프로젝트 배경
-<div style="display:flex; align-items: center"> 
+<div style="display:flex; align-items: center; margin-left:60px;"> 
 <img src="article1.png" style="width:230px; margin:5px;">
 <img src="article2.png" style="width:200px; margin:5px;">
 <img src="article3.png" style="width:200px; margin:5px;">
@@ -60,14 +62,14 @@ HANA FINDER
 
 <img src="data_created.png">
 
- Python의 fakers 라이브러리를 이용해서 약 고객 1만 5천명의 가상의 회원 데이터(이름, 주민등록번호, 이메일, 주소 등)을 생성하고 회원가입 날짜 등도 난수를 이용해 랜덤하게 생성했습니다.    통계청의 KOSIS 에서 제공하는 통계 자료를 기반으로 각 회원의 연령, 성별에 따라 소비 카테고리 별로 다른 가중치를 생성하고, 그 중 일회성 지출 (미용실 ,통신비, 보험료, 학원비 등)과 지출 비용이 상대적으로 큰 부분 (골프, 주유비, 가구, 인테리어, 자동차 서비스, 의류 등)을 구분하여 그 연령대와 성별에 맞는 소비 금액 범위를 설정해 약 500만개의 데이터를 생성했습니다.
+ Python의 fakers 라이브러리를 이용해서 약 고객 1만 5천명의 가상의 회원 데이터(이름, 주민등록번호, 이메일, 주소 등)을 생성하고 회원가입 날짜 등도 난수를 이용해 랜덤하게 생성했습니다.    통계청의 KOSIS 에서 제공하는 통계 자료를 기반으로 각 회원의 연령, 성별에 따라 소비 카테고리 별로 다른 가중치를 생성하고, 그 중 일회성 지출 (미용실 ,통신비, 보험료, 학원비 등)과 지출 비용이 상대적으로 큰 부분 (골프, 주유비, 가구, 인테리어, 자동차 서비스, 의류 등)을 구분하여 그 연령대와 성별에 맞는 소비 금액 범위를 설정해 약 500만개의 데이터를 생성했습니다.<br><br>
 *소비 카테고리는 서울시 빅데이터에서 제공하는 자료에 따라 대분류, 중분류, 소분류로 구분되어 있습니다. 
 
 <br>
 
 ### 카드 정보 입력
 <br>
- 하나 카드에서 제공하는 카드 37개를 (신용카드 15종, 체크카드 16종 멀티카드 6종) 미리 데이터베이스에 카드 이름, 카드 부연 설명, 카드 혜택, 혜택 가맹점, 연회비, 전월 실적 등을 미리 입력해두었습니다. 그리고 데이터를 생성할 때 회원마다 카드를 1개 가진 회원과 2개를 가진 회원을 구분해 카드를 부여했습니다. 그리고 해당 카드의 CVC 번호, 카드 번호, 카드 유효기간 등을 난수를 활용해 부여했습니다. 하나 카드와 제휴된 약 90개의 가맹점들도 등록해 혜택을 계산하는데에 활용했습니다. 
+ 하나 카드에서 제공하는 카드 37개를 (신용카드 15종, 체크카드 16종 멀티카드 6종) 미리 데이터베이스에 카드 이름, 카드 부연 설명, 카드 혜택, 혜택 가맹점, 연회비, 전월 실적 등을 미리 입력해두었습니다.   데이터를 생성할 때 회원마다 카드를 1개 가진 회원과 2개를 가진 회원을 구분해 카드를 부여했습니다. 그리고 해당 카드의 CVC 번호, 카드 번호, 카드 유효기간 등을 난수를 활용해 부여했습니다. 하나 카드와 제휴된 약 90개의 가맹점들도 등록해 혜택을 계산하는데에 활용했습니다. 
 
 <br>
 
@@ -138,9 +140,9 @@ HANA FINDER
 
 *   개인 맞춤 카드 추천
 <br>
-      <img src="tech1.png" style="width:500px; margin-left:150px;">
-      <img src="tech2.png" style="width:500px; margin-left:150px;">
-      <img src="tech16.png" style="margin-left:50px;">
+      <img src="tech1.png" style="width:500px; margin-left:140px;">
+      <img src="tech2.png" style="width:500px; margin-left:140px;">
+      <img src="tech16.png" style="margin-left:40px;">
 <div>
       <img src="tech17.png">
       <img src="tech18.png">
