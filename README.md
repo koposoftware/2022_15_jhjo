@@ -135,9 +135,9 @@
 
 *   개인 맞춤 카드 추천
 <br>
-    <img src="tech1.png" style="width:600px;">
-    <img src="tech2.png" style="width:600px;">
-    <img src="tech16.png">
+      <img src="tech1.png" style="width:500px; margin-left:30px;">
+      <img src="tech2.png" style="width:500px; margin-left:30px;">
+    <img src="tech16.png" style="margin-left:30px;">
 <div>
       <img src="tech17.png">
       <img src="tech18.png">
@@ -176,7 +176,7 @@
 
 *   혜택 조회
  
-      <img src="tech3.png">
+      <img src="tech3.png" style="margin-left:30px">
 
 
 
@@ -184,14 +184,14 @@
 
 *   소비 레포트
 
-      <img src="tech4.png">
+      <img src="tech4.png" style="margin-left:30px">
 
  손님은 카드로 사용한 카드별, 금액별, 카테고리별 상세 내역을 확인할 수 있으며, 달 평균 소비금액과 소비 성향들을 그래프를 통해 전달받을 수 있습니다.  
 
 
  * 알림 기능
 <br>
-<img src="tech5.png">
+<img src="tech5.png" style="margin-left:50px">
 <div style="display:flex; align-items: center">
   <img src="tech6.png">
   <img src="tech7.png">
