@@ -39,7 +39,7 @@
 |skill set| Frontend - HTML, CSS, Javascript|
 | | Backend - Java, Spring, Oracle|
 dataAnalysis - Python,R|
-|자격증| 20xx년 정보처리기사 |
+|자격증||
 || 2021년 사회조사분석사 |
 || 2021년 ADSP |
 || 2022년 SQLPD |
