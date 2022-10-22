@@ -84,6 +84,7 @@
 
 <br>
 <br>
+
 ## 발표 ppt 
 
 ## ERD   
@@ -93,21 +94,49 @@
 [발표자료<img src="HANAFINDER.png"/><br>](/project.pptx)<br>
 
 
+# 사용 기술
+
+
+ *  Spring-MVC 기반 웹 개발<br>
+ *  Python을 활용한 가상의 데이터 생성<br>
+   (Faker Libarary 사용)<br>
+ *  R을 활용한 소비데이터 기반 군집 분석<br>
+   (K-MEANS CLUSTERING)<br>
+ *  WEB SOCKET과 COOL SMS를 활용한 고정 지출 알림 구현<br>
+ *  JAVA MAIL SENDER를 활용한 카드 상품 홍보 서비스 구현<br>
+ * 　HIGH-CHART를 활용한 시각화<br>
+ *  ORACLE PROCEDURE와 VIEW를 활용한 카드 혜택 계산<br>
+ *  M-VIEW, INDEX를 활용한 성능 개선<br>
+<br>
+
+# 개발 환경 
+<br>
+ *  OS: window 10 <br>
+ *  WAS :　Tomcat 9.0 <br>
+ *  JDK :　java 1.8 <br>
+ *  DB : ORACLE 19C (CentOS) <br>
+<br>
+
+# 시스템 아키텍처
+
+<img src="architecture.png">
+
+
+
+
 # 3.프로젝트 결과
 
 <br>
 
 
-   
-## 사용기술
-
+  
 ### <손님>
 <br>
 
 *   개인 맞춤 카드 추천
 <br>
-    <img src="tech1.png" style="width:400px;">
-    <img src="tech2.png" style="width:400px;">
+    <img src="tech1.png" style="width:600px;">
+    <img src="tech2.png" style="width:600px;">
     <img src="tech16.png">
 <div>
       <img src="tech17.png">
@@ -217,32 +246,6 @@
 
 <br>
 
-# 사용 기술
-
-
- *  Spring-MVC 기반 웹 개발<br>
- *  Python을 활용한 가상의 데이터 생성<br>
-   (Faker Libarary 사용)<br>
- *  R을 활용한 소비데이터 기반 군집 분석<br>
-   (K-MEANS CLUSTERING)<br>
- *  WEB SOCKET과 COOL SMS를 활용한 고정 지출 알림 구현<br>
- *  JAVA MAIL SENDER를 활용한 카드 상품 홍보 서비스 구현<br>
- * 　HIGH-CHART를 활용한 시각화<br>
- *  ORACLE PROCEDURE와 VIEW를 활용한 카드 혜택 계산<br>
- *  M-VIEW, INDEX를 활용한 성능 개선<br>
-<br>
-
-# 개발 환경 
-<br>
- *  OS: window 10 <br>
- *  WAS :　Tomcat 9.0 <br>
- *  JDK :　java 1.8 <br>
- *  DB : ORACLE 19C (CentOS) <br>
-<br>
-
-# 시스템 아키텍처
-
-<img src="architecture.png">
 
 # 성능 개선
 
