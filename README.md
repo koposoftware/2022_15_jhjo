@@ -84,6 +84,14 @@
 
 <br>
 <br>
+## 발표 ppt 
+
+## ERD   
+   <img src="ERD1.png"/><br>
+   <img src="ERD2.png"/><br>
+
+[발표자료<img src="HANAFINDER.png"/><br>](/project.pptx)<br>
+
 
 # 3.프로젝트 결과
 
@@ -91,13 +99,6 @@
 
 
    
-## ERD   
-   <img src="ERD1.png"/><br>
-   <img src="ERD2.png"/><br>
-## 발표 ppt 
-
-[발표자료<img src="HANAFINDER.png"/><br>](/project.pptx)<br>
-
 ## 사용기술
 
 ### <손님>
@@ -176,9 +177,10 @@
 *  고객 분석 기능
 
     <img src="tech10.png">
-      <img src="tech8.png">
-    <img src="tech9.png">
-
+    <img src="tech8.png">
+    <div align:"center;">
+      <img src="tech9.png">
+    </div>
 
  관리자는 손님들의 소비 추이, 금년도 TOP 10 카드, 군집의 특성 들을 확인할 수 있습니다. 금년도 TOP 10 카드에서는 작년 대비 카드 가입 증감 추이나 가입자 수 등을 확인할 수 있습니다. 
 
