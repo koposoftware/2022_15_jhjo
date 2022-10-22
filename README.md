@@ -103,10 +103,8 @@
 
 ⚫  개인 맞춤 카드 추천
 <br>
-<div>
-  <img src="tech1.png">
-  <img src="tech2.png">
-</div>
+<img src="tech1.png">
+<img src="tech2.png">
 <img src="tech16.png">
 <div>
   <img src="tech17.png">
@@ -133,8 +131,8 @@
  <br> 
 
 <div style="display:flex; align-items: center">
-  <img src="content3.png" style="width:200px; margin:5px;">
-  <img src="content4.png" style="width:200px; margin:5px;">
+  <img src="content3.png" style="width:400px; height:300px; margin:5px;">
+  <img src="content4.png" style="width:400px; height:300px; margin:5px;">
 </div>
 <br>
 
@@ -198,16 +196,16 @@
  ⚫  이메일 발송
 
 <div style="display:flex; align-items: center"> 
-  <img src="tech12.png" style="width:200px; margin:5px;">
-  <img src="tech13.png" style="width:260px; margin:5px;">
+  <img src="tech12.png" style="width:400px; height:300px; margin:5px;">
+  <img src="tech13.png" style="width:400px; height:300px; margin:5px;">
 </div>
 <br>
 관리자는 군집의 특성들을 확인한 후 군집의 특성에 맞는 카드를 홍보하는 이메일을 발송할 수 있습니다. 
 
 ⚫  카드 상품 등록
 <div style="display:flex; align-items: center"> 
-  <img src="tech14.png" style="width:200px; margin:5px;">
-  <img src="tech15.png" style="width:200px; margin:5px;">
+  <img src="tech14.png" style="width:400px; height:300px; margin:5px;">
+  <img src="tech15.png" style="width:400px; height:300px; margin:5px;">
 </div>
 <br>
  관리자는 카드 상품을 등록할 수 있습니다. 카드 정보에는 카드 이름, 카드 코멘트, 카드 이미지, 연회비, 연회비 타입 등이 입력되며 카드의 혜택에는 제휴 가맹점 약 90개를 선택해서 할인율, 혜택 한도, 한 달 실적 등을 등록할 수 있습니다.  
