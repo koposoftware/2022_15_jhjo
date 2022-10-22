@@ -1,6 +1,8 @@
+<img src="logo.png">
+
 # 마이데이터 기반 카드 추천 서비스
 
-<img src="logo.png">
+
 <br>
 <br>
 
