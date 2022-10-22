@@ -4,10 +4,10 @@
 
 # 1. 프로젝트 배경 및 목적
 #  프로젝트 배경
-<div> 
-<img src="article1.png" style="width:180px;">
-<img src="article2.png" style="width:160px;">
-<img src="article3.png" style="width:160px;">
+<div style="display:flex; align-items: center"> 
+<img src="article1.png" style="width:230px; margin:5px;">
+<img src="article2.png" style="width:200px; margin:5px;">
+<img src="article3.png" style="width:200px; margin:5px;">
 </div>
 
 
@@ -69,9 +69,9 @@
 <br>
 
 ⚫  카드의 혜택 계산
-<div>
-<img src="oracle_view.png" style="width:240px; height:200px;"> 
-<img src="oracle.png" style="width:200px;"> 
+<div style="display:flex; align-items: center">
+<img src="oracle_view.png" style="width:220px; height:200px; margin:5px;"> 
+<img src="oracle.png" style="width:200px; margin:5px;"> 
 </div> 
  서브쿼리, 조인 등으로 복잡한 쿼리문들을 VIEW로 생성해 간단하게 만들고, ORACLE의 PROCEDURE와 CURSOR, FUNCTION, 임시 테이블을 활용해 카드 사용 시 혜택을 계산하도록 구현했습니다. CURSOR로 소비데이터들을 가져와 PROCEDURE 내에서 FUNCTION을 호출하고 혜택을 계산해 REF CURSOR를 통해 결과값들을 웹으로 가져와 사용했습니다. 
 
@@ -104,13 +104,13 @@
 ⚫  개인 맞춤 카드 추천
 <br>
 <div>
-  <img src="tech1.png" style="width:270px;">
-  <img src="tech2.png" style="width:230px;">
+  <img src="tech1.png">
+  <img src="tech2.png">
 </div>
-<img src="tech16.png" style="width:500px; height:300px;">
+<img src="tech16.png">
 <div>
-  <img src="tech17.png" style="width:230px;">
-  <img src="tech18.png" style="width:260px;">
+  <img src="tech17.png">
+  <img src="tech18.png">
 </div>
 
  손님은 3개월 치 소비데이터를 기반으로 신용 카드, 체크 카드, 멀티
@@ -124,17 +124,18 @@
 <br>
 ⚫ 카드 상품 조회
 <br>
-<div>
-<img src="content1.png" style="width:230px;">
-<img src="content2.png" style="width:230px;">
+<div style="display:flex; align-items: center">
+<img src="content1.png" style="width:200px; margin:5px;">
+<img src="content2.png" style="width:200px; margin:5px;">
 </div>
 <br>
  고객은 카드 상품을 조회할 수 있으며, 원하는 혜택을 클릭해서 카드를 필터링 할 수 있습니다.
  <br> 
 
-
-<img src="content3.png" style="width:230px;">
-<img src="content4.png" style="width:230px;">
+<div style="display:flex; align-items: center">
+  <img src="content3.png" style="width:200px; margin:5px;">
+  <img src="content4.png" style="width:200px; margin:5px;">
+</div>
 <br>
 
 손님은 원하는 카드를 클릭하면 상세정보를 확인할 수 있습니다. 
@@ -161,8 +162,8 @@
  <br>
 <img src="tech5.png">
 <div>
-  <img src="tech6.png" style="width:230px; height:240px;">
-  <img src="tech7.png" style="width:230px;">
+  <img src="tech6.png">
+  <img src="tech7.png">
 </div>
 <br>
   손님은 Calendar에 고정비 지출 내역들을 등록하고 알림을 제공받을 수 있습니다. Web socket을 통해서 웹에서 5일 후에 있을 지출 일정에 대한 알림을, cool SMS를 통해 1일 후에 있을 지출 일정에 대한 알림을 휴대폰 문자 메시지로 알림을 받을 수 있습니다.
@@ -173,9 +174,9 @@
 
 ⚫ 고객 분석 기능
 <div>
-<img src="tech8.png" style="width:150px;">
-<img src="tech9.png" style="width:170px;">
-<img src="tech10.png" style="width:170px; height:100px">
+<img src="tech10.png">
+<img src="tech8.png">
+<img src="tech9.png">
 </div>
 
  관리자는 손님들의 소비 추이, 금년도 TOP 10 카드, 군집의 특성 들을 확인할 수 있습니다. 금년도 TOP 10 카드에서는 작년 대비 카드 가입 증감 추이나 가입자 수 등을 확인할 수 있습니다. 
@@ -196,17 +197,18 @@
 
  ⚫  이메일 발송
 
-<div> 
-<img src="tech12.png" style="width:250px;">
-<img src="tech13.png" style="width:250px; height:120px;">
+<div style="display:flex; align-items: center"> 
+  <img src="tech12.png" style="width:200px; margin:5px;">
+  <img src="tech13.png" style="width:260px; margin:5px;">
 </div>
 <br>
 관리자는 군집의 특성들을 확인한 후 군집의 특성에 맞는 카드를 홍보하는 이메일을 발송할 수 있습니다. 
 
 ⚫  카드 상품 등록
-
-<img src="tech14.png">
-<img src="tech15.png">
+<div style="display:flex; align-items: center"> 
+  <img src="tech14.png" style="width:200px; margin:5px;">
+  <img src="tech15.png" style="width:200px; margin:5px;">
+</div>
 <br>
  관리자는 카드 상품을 등록할 수 있습니다. 카드 정보에는 카드 이름, 카드 코멘트, 카드 이미지, 연회비, 연회비 타입 등이 입력되며 카드의 혜택에는 제휴 가맹점 약 90개를 선택해서 할인율, 혜택 한도, 한 달 실적 등을 등록할 수 있습니다.  
 
@@ -237,7 +239,7 @@
 |학력|졸업(2022.02)|충남대학교 통계학과|
 |자격증|2021년 사회조사분석사 2급|
 | |2021년 ADSP|
-| |2022년 SQLPD|
+| |2022년 SQLD|
 |교육 사항|2022.03 ~ 2022.11 광명융합기술원 데이터분석과|
 |수상|2022년 한국폴리텍대학 벤처창업아이템경진대회 본선 진출(동상확보) (고용노동부 후원)|
 | |2022년 광명융합기술원 프로젝트 작품 경진대회 금상 수상|
