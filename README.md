@@ -125,8 +125,8 @@
 ⚫ 카드 상품 조회
 <br>
 <div style="display:flex; align-items: center">
-<img src="content1.png" style="width:200px; margin:5px;">
-<img src="content2.png" style="width:200px; margin:5px;">
+<img src="content1.png" style="width:400px; height:500px; margin:5px;">
+<img src="content2.png" style="width:400px; height:500px; margin:5px;">
 </div>
 <br>
  고객은 카드 상품을 조회할 수 있으며, 원하는 혜택을 클릭해서 카드를 필터링 할 수 있습니다.
