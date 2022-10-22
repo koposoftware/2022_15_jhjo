@@ -103,8 +103,8 @@
 
 ⚫  개인 맞춤 카드 추천
 <br>
-<img src="tech1.png">
-<img src="tech2.png">
+<img src="tech1.png" style="width:400px;">
+<img src="tech2.png" style="width:400px;">
 <img src="tech16.png">
 <div>
   <img src="tech17.png">
