@@ -216,18 +216,25 @@
 # 사용 기술
 
 
- ⚫ Spring-MVC 기반 웹 개발
- ⚫ Python을 활용한 가상의 데이터 생성
-   (Faker Libarary 사용)
- ⚫ R을 활용한 소비데이터 기반 군집 분석
+ ⚫ Spring-MVC 기반 웹 개발<br>
+ ⚫ Python을 활용한 가상의 데이터 생성<br>
+   (Faker Libarary 사용)<br>
+ ⚫ R을 활용한 소비데이터 기반 군집 분석<br>
    (K-MEANS CLUSTERING)
- ⚫ WEB SOCKET과 COOL SMS를 활용한 고정 지출 알림 구현
- ⚫ JAVA MAIL SENDER를 활용한 카드 상품 홍보 서비스 구현
- ⚫　HIGH-CHART를 활용한 시각화
- ⚫ ORACLE PROCEDURE와 VIEW를 활용한 카드 혜택 계산
- ⚫ M-VIEW, INDEX를 활용한 성능 개선
+ ⚫ WEB SOCKET과 COOL SMS를 활용한 고정 지출 알림 구현<br>
+ ⚫ JAVA MAIL SENDER를 활용한 카드 상품 홍보 서비스 구현<br>
+ ⚫　HIGH-CHART를 활용한 시각화<br>
+ ⚫ ORACLE PROCEDURE와 VIEW를 활용한 카드 혜택 계산<br>
+ ⚫ M-VIEW, INDEX를 활용한 성능 개선<br>
 <br>
 
+# 개발 환경 
+<br>
+ ⚫ OS: window 10 <br>
+ ⚫ WAS :　Tomcat 9.0 <br>
+ ⚫ JDK :　java 1.8 <br>
+ ⚫ DB : ORACLE 19C (CentOS) <br>
+<br>
 
 # 시스템 아키텍처
 
