@@ -140,7 +140,7 @@ HANA FINDER
 <br>
       <img src="tech1.png" style="width:500px; margin-left:150px;">
       <img src="tech2.png" style="width:500px; margin-left:150px;">
-    <img src="tech16.png" style="margin-left:70px;">
+      <img src="tech16.png" style="margin-left:50px;">
 <div>
       <img src="tech17.png">
       <img src="tech18.png">
