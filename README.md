@@ -77,7 +77,7 @@
 <br>
 
 ## 카드의 혜택 계산<br>
-<div style="display:flex; align-items: center">
+<div style="display:flex; align-items: center; margin-left:80px;">
 <img src="oracle_view.png" style="width:220px; height:200px; margin:5px;"> 
 <img src="oracle.png" style="width:200px; margin:5px;"> 
 </div> 
