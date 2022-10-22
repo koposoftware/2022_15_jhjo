@@ -1,8 +1,11 @@
-# 프로젝트 제목
+# 마이데이터 기반 카드 추천 서비스
+
+HANA FINDER
 
 [프로젝트 홈페이지 - https://koposoftware.github.io/2022_15_jhjo/](https://koposoftware.github.io/2022_15_jhjo/)
 
 # 1. 프로젝트 배경 및 목적
+
 #  프로젝트 배경
 <div style="display:flex; align-items: center"> 
 <img src="article1.png" style="width:230px; margin:5px;">
