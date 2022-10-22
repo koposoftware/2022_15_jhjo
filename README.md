@@ -137,7 +137,7 @@
 <br>
       <img src="tech1.png" style="width:500px; margin-left:150px;">
       <img src="tech2.png" style="width:500px; margin-left:150px;">
-    <img src="tech16.png" style="margin-left:150px;">
+    <img src="tech16.png" style="margin-left:70px;">
 <div>
       <img src="tech17.png">
       <img src="tech18.png">
@@ -191,8 +191,8 @@
 
  * 알림 기능
 <br>
-<img src="tech5.png" style="margin-left:70px">
-<div style="display:flex; align-items: center">
+<img src="tech5.png" style="margin-left:150px">
+<div style="display:flex; align-items: center; margin-left:70px;">
   <img src="tech6.png">
   <img src="tech7.png">
 </div>
@@ -207,7 +207,7 @@
 
     <img src="tech10.png">
     <img src="tech8.png">
-    <div>
+    <div style="margin-left:150px;">
       <img src="tech9.png">
     </div>
 
@@ -229,7 +229,7 @@
 
  *  이메일 발송
 
-<div style="display:flex; align-items: center"> 
+<div style="display:flex; align-items: center; margin-left:80px;"> 
   <img src="tech12.png" style="width:350px; height:200px; margin:5px;">
   <img src="tech13.png" style="width:350px; height:200px; margin:5px;">
 </div>
@@ -237,7 +237,7 @@
 관리자는 군집의 특성들을 확인한 후 군집의 특성에 맞는 카드를 홍보하는 이메일을 발송할 수 있습니다. 
 
 *  카드 상품 등록
-<div style="display:flex; align-items: center"> 
+<div style="display:flex; align-items: center; margin-left:80px;"> 
   <img src="tech14.png" style="width:350px; height:200px; margin:5px;">
   <img src="tech15.png" style="width:350px; height:200px; margin:5px;">
 </div>
