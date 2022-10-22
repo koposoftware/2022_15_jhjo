@@ -3,10 +3,6 @@
 
 <img src="logo.png" style="width:300px;">
 
-
-
-
-<br>
 <br>
 
 [프로젝트 홈페이지 - https://koposoftware.github.io/2022_15_jhjo/](https://koposoftware.github.io/2022_15_jhjo/)
@@ -51,13 +47,15 @@
 있다면 효과적으로 마케팅에 활용하고, 그 비용을 감소시킬 수 있습니다. 본 프로젝트에서는 소비 데이터를 기반으로 개인들을 군집화하고 그 군집의 특성을 파악해 관리자에게 전달하고 마케팅에 활용하는데에 그 목적이 있습니다.
 
 
-
+<hr>
 
 # 2. 프로젝트 제안서
 
 
 [발표자료<img src="HANAFINDER.png"/>](/하나_FINDER_제안서.pptx)<br>
 <br> <br> 
+
+<hr>
 
 # 프로젝트 개요
 
@@ -95,6 +93,8 @@
 <br>
 <br>
 
+<hr>
+
 ## 발표 ppt 
 
 ## ERD   
@@ -103,6 +103,7 @@
 
 [발표자료<img src="HANAFINDER.png"/><br>](/project.pptx)<br>
 
+<hr>
 
 # 사용 기술
 
@@ -119,6 +120,8 @@
  *  M-VIEW, INDEX를 활용한 성능 개선<br>
 <br>
 
+<hr>
+
 # 개발 환경 
 <br>
  *  OS: window 10 <br>
@@ -127,12 +130,14 @@
  *  DB : ORACLE 19C (CentOS) <br>
 <br>
 
+<hr>
+
 # 시스템 아키텍처
 
 <img src="architecture.png">
 
 
-
+<hr>
 
 # 3.프로젝트 결과
 
@@ -259,16 +264,19 @@
 
 <br>
 
+<hr>
 
 # 성능 개선
 
 <img src="quality.png">
 
+<hr>
 
 ## 시연 동영상 
 
   <iframe width="424" height="238" src="https://www.youtube.com/embed/reOGfxYJre0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<hr>
 
  
 # 5. 본인 소개
@@ -284,7 +292,7 @@
 | |2022년 SQLD|
 |교육 사항|2022.03 ~ 2022.11 광명융합기술원 데이터분석과|
 |수상|2022년 한국폴리텍대학 벤처창업아이템경진대회 본선 진출(동상확보) (고용노동부 후원)|
-| |2022년 광명융합기술원 프로젝트 작품 경진대회 금상 수상|
+| |2022년 광명융합기술원 프로젝트 작품 경진대회 금상|
 |특기사항|  TOEIC 830 |
 | | 오목 고수, 드론 조종 자격증 보유|
 
