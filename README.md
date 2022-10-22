@@ -53,7 +53,7 @@
 
 <br>
 
-⚫ 데이터의 생성
+###  데이터의 생성
 
 <img src="data_created.png">
 
@@ -62,25 +62,27 @@
 
 <br>
 
-⚫ 카드 정보 입력
-
+### 카드 정보 입력
+<br>
  하나 카드에서 제공하는 카드 37개를 (신용카드 15종, 체크카드 16종 멀티카드 6종) 미리 데이터베이스에 카드 이름, 카드 부연 설명, 카드 혜택, 혜택 가맹점, 연회비, 전월 실적 등을 미리 입력해두었습니다. 그리고 데이터를 생성할 때 회원마다 카드를 1개 가진 회원과 2개를 가진 회원을 구분해 카드를 부여했습니다. 그리고 해당 카드의 CVC 번호, 카드 번호, 카드 유효기간 등을 난수를 활용해 부여했습니다. 하나 카드와 제휴된 약 90개의 가맹점들도 등록해 혜택을 계산하는데에 활용했습니다. 
 
 <br>
 
-⚫  카드의 혜택 계산
+### 카드의 혜택 계산<br>
 <div style="display:flex; align-items: center" align:"center">
 <img src="oracle_view.png" style="width:220px; height:200px; margin:5px;"> 
 <img src="oracle.png" style="width:200px; margin:5px;"> 
 </div> 
+<br>
  서브쿼리, 조인 등으로 복잡한 쿼리문들을 VIEW로 생성해 간단하게 만들고, ORACLE의 PROCEDURE와 CURSOR, FUNCTION, 임시 테이블을 활용해 카드 사용 시 혜택을 계산하도록 구현했습니다. CURSOR로 소비데이터들을 가져와 PROCEDURE 내에서 FUNCTION을 호출하고 혜택을 계산해 REF CURSOR를 통해 결과값들을 웹으로 가져와 사용했습니다. 
 
  <br>  
 
-⚫  소비 데이터를 기반으로 군집 분석
-
+### 소비 데이터를 기반으로 군집 분석
+<br>
  소비 데이터를 R을 활용해 데이터베이스에서 소비 데이터와 회원정보를 가져와 그 중 많이 소비하는 부분인 커피나 요식, 편의점, 대부분이 일회성지출에 그치는 소비 카테고리 (통신,미용 등) 는 제외한 후 CAST 함수를 활용해 행과 열을 변형시켰습니다. 전처리를 진행해 데이터를 가공하고 PCA 로 3개의 축을 사용해 약 0.78 정도의 설명력을 확보한 후에 K-MEANS CLUSTERING을 통해 군집을 형성했습니다. 
 
+<br>
 <br>
 
 # 3.프로젝트 결과
@@ -101,14 +103,14 @@
 ### <손님>
 <br>
 
-⚫  개인 맞춤 카드 추천
+*   개인 맞춤 카드 추천
 <br>
-<img src="tech1.png" style="width:400px;">
-<img src="tech2.png" style="width:400px;">
-<img src="tech16.png">
+    <img src="tech1.png" style="width:400px;">
+    <img src="tech2.png" style="width:400px;">
+    <img src="tech16.png">
 <div>
-  <img src="tech17.png">
-  <img src="tech18.png">
+      <img src="tech17.png">
+      <img src="tech18.png">
 </div>
 
  손님은 3개월 치 소비데이터를 기반으로 신용 카드, 체크 카드, 멀티
@@ -120,7 +122,7 @@
 
 
 <br>
-⚫ 카드 상품 조회
+*  카드 상품 조회
 <br>
 <div style="display:flex; align-items: center">
 <img src="content1.png" style="width:400px; height:200px; margin:5px;">
@@ -142,23 +144,23 @@
 <br>
 <br>
 
-⚫  혜택 조회
-
-<img src="tech3.png">
+*   혜택 조회
+ 
+      <img src="tech3.png">
 
 
 
 회원은 가지고 있는 카드를 통해 전달에 어떤 혜택을 받았는지 금액과 혜택 받은 가맹점들을 확인할 수 있습니다.  
 
-⚫  소비 레포트
+*   소비 레포트
 
-<img src="tech4.png">
+      <img src="tech4.png">
 
  손님은 카드로 사용한 카드별, 금액별, 카테고리별 상세 내역을 확인할 수 있으며, 달 평균 소비금액과 소비 성향들을 그래프를 통해 전달받을 수 있습니다.  
 
 
- ⚫  알림 기능
- <br>
+ * 알림 기능
+<br>
 <img src="tech5.png">
 <div style="display:flex; align-items: center">
   <img src="tech6.png">
@@ -171,11 +173,11 @@
 
 ### <관리자>
 
-⚫ 고객 분석 기능
+*  고객 분석 기능
 
-<img src="tech10.png">
-<img src="tech8.png">
-<img src="tech9.png">
+    <img src="tech10.png">
+      <img src="tech8.png">
+    <img src="tech9.png">
 
 
  관리자는 손님들의 소비 추이, 금년도 TOP 10 카드, 군집의 특성 들을 확인할 수 있습니다. 금년도 TOP 10 카드에서는 작년 대비 카드 가입 증감 추이나 가입자 수 등을 확인할 수 있습니다. 
@@ -194,7 +196,7 @@
  우측 상단의 군집을 선택하면 각 군집들의 특징들을 확인할 수 있습니다. 군집의 특징에는 한달 평균 사용 금액, 빈도, 금액별 소비를 어디에 많이 하는지와 어떤 카드를 많이 가지고 있는지 확인할 수 있습니다. 
 
 
- ⚫  이메일 발송
+ *  이메일 발송
 
 <div style="display:flex; align-items: center"> 
   <img src="tech12.png" style="width:350px; height:200px; margin:5px;">
@@ -203,7 +205,7 @@
 <br>
 관리자는 군집의 특성들을 확인한 후 군집의 특성에 맞는 카드를 홍보하는 이메일을 발송할 수 있습니다. 
 
-⚫  카드 상품 등록
+*  카드 상품 등록
 <div style="display:flex; align-items: center"> 
   <img src="tech14.png" style="width:350px; height:200px; margin:5px;">
   <img src="tech15.png" style="width:350px; height:200px; margin:5px;">
@@ -216,24 +218,24 @@
 # 사용 기술
 
 
- ⚫ Spring-MVC 기반 웹 개발<br>
- ⚫ Python을 활용한 가상의 데이터 생성<br>
+ *  Spring-MVC 기반 웹 개발<br>
+ *  Python을 활용한 가상의 데이터 생성<br>
    (Faker Libarary 사용)<br>
- ⚫ R을 활용한 소비데이터 기반 군집 분석<br>
-   (K-MEANS CLUSTERING)
- ⚫ WEB SOCKET과 COOL SMS를 활용한 고정 지출 알림 구현<br>
- ⚫ JAVA MAIL SENDER를 활용한 카드 상품 홍보 서비스 구현<br>
- ⚫　HIGH-CHART를 활용한 시각화<br>
- ⚫ ORACLE PROCEDURE와 VIEW를 활용한 카드 혜택 계산<br>
- ⚫ M-VIEW, INDEX를 활용한 성능 개선<br>
+ *  R을 활용한 소비데이터 기반 군집 분석<br>
+   (K-MEANS CLUSTERING)<br>
+ *  WEB SOCKET과 COOL SMS를 활용한 고정 지출 알림 구현<br>
+ *  JAVA MAIL SENDER를 활용한 카드 상품 홍보 서비스 구현<br>
+ * 　HIGH-CHART를 활용한 시각화<br>
+ *  ORACLE PROCEDURE와 VIEW를 활용한 카드 혜택 계산<br>
+ *  M-VIEW, INDEX를 활용한 성능 개선<br>
 <br>
 
 # 개발 환경 
 <br>
- ⚫ OS: window 10 <br>
- ⚫ WAS :　Tomcat 9.0 <br>
- ⚫ JDK :　java 1.8 <br>
- ⚫ DB : ORACLE 19C (CentOS) <br>
+ *  OS: window 10 <br>
+ *  WAS :　Tomcat 9.0 <br>
+ *  JDK :　java 1.8 <br>
+ *  DB : ORACLE 19C (CentOS) <br>
 <br>
 
 # 시스템 아키텍처
