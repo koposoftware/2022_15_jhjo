@@ -4,7 +4,7 @@
 
 # 1. 프로젝트 배경 및 목적
 #  프로젝트 배경
-<div style="display:flex; align-items: center" align:"center"> 
+<div style="display:flex; align-items: center"> 
 <img src="article1.png" style="width:230px; margin:5px;">
 <img src="article2.png" style="width:200px; margin:5px;">
 <img src="article3.png" style="width:200px; margin:5px;">
@@ -69,7 +69,7 @@
 <br>
 
 ### 카드의 혜택 계산<br>
-<div style="display:flex; align-items: center" align:"center">
+<div style="display:flex; align-items: center">
 <img src="oracle_view.png" style="width:220px; height:200px; margin:5px;"> 
 <img src="oracle.png" style="width:200px; margin:5px;"> 
 </div> 
@@ -135,9 +135,9 @@
 
 *   개인 맞춤 카드 추천
 <br>
-      <img src="tech1.png" style="width:500px; margin-left:30px;">
-      <img src="tech2.png" style="width:500px; margin-left:30px;">
-    <img src="tech16.png" style="margin-left:30px;">
+      <img src="tech1.png" style="width:500px; margin-left:150px;">
+      <img src="tech2.png" style="width:500px; margin-left:150px;">
+    <img src="tech16.png" style="margin-left:150px;">
 <div>
       <img src="tech17.png">
       <img src="tech18.png">
@@ -176,7 +176,7 @@
 
 *   혜택 조회
  
-      <img src="tech3.png" style="margin-left:30px">
+      <img src="tech3.png" style="margin-left:150px">
 
 
 
@@ -184,14 +184,14 @@
 
 *   소비 레포트
 
-      <img src="tech4.png" style="margin-left:30px">
+      <img src="tech4.png" style="margin-left:150px">
 
  손님은 카드로 사용한 카드별, 금액별, 카테고리별 상세 내역을 확인할 수 있으며, 달 평균 소비금액과 소비 성향들을 그래프를 통해 전달받을 수 있습니다.  
 
 
  * 알림 기능
 <br>
-<img src="tech5.png" style="margin-left:50px">
+<img src="tech5.png" style="margin-left:70px">
 <div style="display:flex; align-items: center">
   <img src="tech6.png">
   <img src="tech7.png">
@@ -207,7 +207,7 @@
 
     <img src="tech10.png">
     <img src="tech8.png">
-    <div align:"center;">
+    <div>
       <img src="tech9.png">
     </div>
 
@@ -221,7 +221,7 @@
 
 
 
-<img src="tech11.png">
+<img src="tech11.png" style="margin-left:160px;">
 
 
  우측 상단의 군집을 선택하면 각 군집들의 특징들을 확인할 수 있습니다. 군집의 특징에는 한달 평균 사용 금액, 빈도, 금액별 소비를 어디에 많이 하는지와 어떤 카드를 많이 가지고 있는지 확인할 수 있습니다. 
