@@ -123,23 +123,24 @@
 ⚫ 카드 상품 조회
 <br>
 <div style="display:flex; align-items: center">
-<img src="content1.png" style="width:400px; height:300px; margin:5px;">
-<img src="content2.png" style="width:400px; height:300px; margin:5px;">
+<img src="content1.png" style="width:400px; height:200px; margin:5px;">
+<img src="content2.png" style="width:400px; height:200px; margin:5px;">
 </div>
+<br>
 <br>
  고객은 카드 상품을 조회할 수 있으며, 원하는 혜택을 클릭해서 카드를 필터링 할 수 있습니다.
  <br> 
-
+ <br>
 <div style="display:flex; align-items: center">
   <img src="content3.png" style="width:350px; height:200px; margin:5px;">
   <img src="content4.png" style="width:350px; height:200px; margin:5px;">
 </div>
 <br>
-
+<br>
 손님은 원하는 카드를 클릭하면 상세정보를 확인할 수 있습니다. 
 혜택을 받을 수 있는 가맹점, 전달 실적, 연회비 타입, 연회비, 혜택율, 혜택 한도를 확인할 수 있습니다.
-
-
+<br>
+<br>
 
 ⚫  혜택 조회
 
@@ -211,6 +212,22 @@
  관리자는 카드 상품을 등록할 수 있습니다. 카드 정보에는 카드 이름, 카드 코멘트, 카드 이미지, 연회비, 연회비 타입 등이 입력되며 카드의 혜택에는 제휴 가맹점 약 90개를 선택해서 할인율, 혜택 한도, 한 달 실적 등을 등록할 수 있습니다.  
 
 <br>
+
+# 사용 기술
+
+
+ ⚫ Spring-MVC 기반 웹 개발
+ ⚫ Python을 활용한 가상의 데이터 생성
+   (Faker Libarary 사용)
+ ⚫ R을 활용한 소비데이터 기반 군집 분석
+   (K-MEANS CLUSTERING)
+ ⚫ WEB SOCKET과 COOL SMS를 활용한 고정 지출 알림 구현
+ ⚫ JAVA MAIL SENDER를 활용한 카드 상품 홍보 서비스 구현
+ ⚫　HIGH-CHART를 활용한 시각화
+ ⚫ ORACLE PROCEDURE와 VIEW를 활용한 카드 혜택 계산
+ ⚫ M-VIEW, INDEX를 활용한 성능 개선
+<br>
+
 
 # 시스템 아키텍처
 
