@@ -4,7 +4,7 @@
 
 # 1. 프로젝트 배경 및 목적
 #  프로젝트 배경
-<div style="display:flex; align-items: center"> 
+<div style="display:flex; align-items: center" align:"center"> 
 <img src="article1.png" style="width:230px; margin:5px;">
 <img src="article2.png" style="width:200px; margin:5px;">
 <img src="article3.png" style="width:200px; margin:5px;">
@@ -69,7 +69,7 @@
 <br>
 
 ⚫  카드의 혜택 계산
-<div style="display:flex; align-items: center">
+<div style="display:flex; align-items: center" align:"center">
 <img src="oracle_view.png" style="width:220px; height:200px; margin:5px;"> 
 <img src="oracle.png" style="width:200px; margin:5px;"> 
 </div> 
@@ -161,7 +161,7 @@
  ⚫  알림 기능
  <br>
 <img src="tech5.png">
-<div>
+<div style="display:flex; align-items: center">
   <img src="tech6.png">
   <img src="tech7.png">
 </div>
@@ -173,11 +173,11 @@
 ### <관리자>
 
 ⚫ 고객 분석 기능
-<div>
+
 <img src="tech10.png">
 <img src="tech8.png">
 <img src="tech9.png">
-</div>
+
 
  관리자는 손님들의 소비 추이, 금년도 TOP 10 카드, 군집의 특성 들을 확인할 수 있습니다. 금년도 TOP 10 카드에서는 작년 대비 카드 가입 증감 추이나 가입자 수 등을 확인할 수 있습니다. 
 
