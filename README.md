@@ -1,7 +1,8 @@
 
 # <center><b>  마이데이터 기반 카드 추천 서비스 </b></center> 
 
-<img src="logo.png" style="width:300px;">
+
+<center><img src="logo.png" style="width:300px;"></center>
 
 <br>
 
@@ -148,7 +149,7 @@ PROCEDURE와 CURSOR, FUNCTION, 임시 테이블을 활용해 카드 사용 시 �
 
 
   
-### <center <b><손님></b> </center>
+### <center> <b><손님></b> </center>
 <br>
 
 *   개인 맞춤 카드 추천
@@ -281,20 +282,20 @@ socket을 통해서 웹에서 5일 후에 있을 지출 일정에 대한 알림�
 
 <hr>
 
-# <center> <b>성능 개선</b> </center>
+# <center> <b>4. 성능 개선</b> </center>
 
 <center><img src="quality.png"></center>
 
 <hr>
 
-## <center> <b>시연 동영상</b> </center> 
+## <center> <b>5. 시연 동영상</b> </center> 
 
   <iframe width="424" height="238" src="https://www.youtube.com/embed/reOGfxYJre0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <hr>
 
  
-# <center> <b>5. 본인 소개</b> </center>
+# <center> <b>6. 본인 소개</b> </center>
 
 |이름 |조재희|![조재희](/jaehee34.jpg)|
 |이메일 | jaehee3679(@)daum.net|
