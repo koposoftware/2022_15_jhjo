@@ -288,7 +288,7 @@
  
 # <center> <b>6. 본인 소개</b> </center>
 
-|이름 |조재희|![조재희](/jaehee34.jpg){:width:"30%"}|
+|이름 |조재희|![조재희](/jaehee34.jpg){:width="30%"}|
 |이메일 | jaehee3679(@)daum.net|
 |skill set| Frontend - HTML, CSS, Javascript|
 | | Backend - Java, Spring, Oracle Database|
