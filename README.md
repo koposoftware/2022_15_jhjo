@@ -1,6 +1,6 @@
 
 # <center><b>  마이데이터 기반 카드 추천 서비스 </b></center> 
-
+<br>
 
 <center><img src="logo.png" style="width:300px;"></center>
 
@@ -123,7 +123,7 @@
 
 <hr>
 
-## <center> <b>개발 환경</b> /center> 
+## <center> <b>개발 환경</b> </center> 
 <br>
  *  OS : window 10 <br>
  *  WAS : Tomcat 9.0 <br>
@@ -170,7 +170,7 @@
 
 
 <br>
-*  카드 상품 조회
+*  <b>카드 상품 조회</b>
 <br>
 <div style="display:flex; align-items: center">
 <img src="content1.png" style="width:400px; height:200px; margin:5px;">
@@ -192,7 +192,7 @@
 <br>
 <br>
 
-*   혜택 조회
+*   <b>혜택 조회</b>
  
       <center><img src="tech3.png"></center>
 
@@ -202,14 +202,14 @@
 &nbsp;회원은 가지고 있는 카드를 통해 전달에 어떤 혜택을 받았는지 금액과 혜택 받은 
 가맹점들을 확인할 수 있습니다.  
 
-*   소비 레포트
+*   <b>소비 레포트</b>
 
       <center><img src="tech4.png"></center>
 
 &nbsp;손님은 카드로 사용한 카드별, 금액별, 카테고리별 상세 내역을 확인할 수 있으며, 달 평균 소비금액과 소비 성향들 그래프를 통해 전달받을 수 있습니다.  
 
 
- * 알림 기능
+*   <b>알림 기능</b>
 <br>
 <center><img src="tech5.png"></center>
 <div style="display:flex; align-items: center; margin-left:70px;">
@@ -224,7 +224,7 @@
 
 ### <center> <b><관리자></b> </center>
 
-*  고객 분석 기능
+*  <b>고객 분석 기능</b>
 
     <img src="tech10.png">
     <img src="tech8.png">
@@ -252,7 +252,7 @@
 특징에는 한달 평균 사용 금액, 빈도, 금액별 소비를 어디에 많이 하는지와 어떤 카드를 많이 가지고 있는지 확인할 수 있습니다. 
 
 
- *  이메일 발송
+ *  <b>이메일 발송</b>
 
 <div style="display:flex; align-items: center; margin-left:80px;"> 
   <img src="tech12.png" style="width:350px; height:200px; margin:5px;">
@@ -261,7 +261,7 @@
 <br>
 &nbsp;관리자는 군집의 특성들을 확인한 후 군집의 특성에 맞는 카드를 홍보하는 이메일을 발송할 수 있습니다. 
 
-*  카드 상품 등록
+*  <b>카드 상품 등록</b>
 <div style="display:flex; align-items: center; margin-left:80px;"> 
   <img src="tech14.png" style="width:350px; height:200px; margin:5px;">
   <img src="tech15.png" style="width:350px; height:200px; margin:5px;">
@@ -279,7 +279,7 @@
 
 <hr>
 
-## <center> <b>5. 시연 동영상</b> </center> 
+# <center> <b>5. 시연 동영상</b> </center> 
 
   <iframe width="424" height="238" src="https://www.youtube.com/embed/reOGfxYJre0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -297,7 +297,7 @@
 | |2021년 ADSP|
 | |2022년 SQLD|
 |교육 사항|2022.03 ~ 2022.11 광명융합기술원 데이터분석과|
-|수상|2022년 한국폴리텍대학 벤처창업아이템경진대회 본선 진출(동상확보) (고용노동부 후원)|
+|수상|2022년 한국폴리텍대학 벤처창업아이템경진대회 본선 진출(동상확보)(중소기업벤처부)|
 | |2022년 광명융합기술원 프로젝트 작품 경진대회 금상|
 |특기사항|  TOEIC 830 |
 | | 오목 고수, 드론 조종 자격증 보유|
