@@ -137,12 +137,15 @@
 ## <center> <b>시스템 아키텍처</b> </center>
 
 <img src="architecture.png">
+<br>
 
 ## <center> <b>서비스 아키텍처</b> </center>
 
 <img src="service_architecture.png">
 
 <hr>
+
+<br>
 
 # <center> <b>3.프로젝트 결과</b> </center>
 
