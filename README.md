@@ -296,7 +296,7 @@
 
 # <center> <b>5. 시연 동영상</b> </center> 
 <center>
- <a href="https://youtu.be/YppdIfTEPEA"><img src="index.png"></a>
+ <a href="https://youtu.be/tLBiA-JInXY"><img src="index.png"></a>
 </center>
 <hr>
 
