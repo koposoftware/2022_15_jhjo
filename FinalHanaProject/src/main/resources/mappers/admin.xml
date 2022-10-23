@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.ac.kopo.dao.AdminDAO">
+	<resultMap type="kr.ac.kopo.vo.SelectedCardInfoByCate" id="selectedCardInfoMap">
+  		<result column="IMG_URL" property="imgUrl"/>
+  	 	<result column="CARD_NAME" property="cardName"/> 
+  	    <result column="ANNUL_FEE" property="annualFee"/>
+  	    <result column="CARD_CATE_NUM" property="cardCateNum"/>
+  	    <result column="SORT_CARD" property="sortCard"/>
+  	    <result column="COMMENT_OF_CARD" property="commentOfCard"/>
+  	</resultMap>
+
+	<update id="resisterCardInfo" parameterType="ResisteredCardVO">
+		
+		
+	</update>
+	
+	<insert id="resisterCardBenefit" parameterType="ResisteredCardBenefitVO">
+		<selectKey resultType="int" keyProperty="cardCateMaxNumber" order="BEFORE">
+			SELECT MAX(TO_NUMBER(SUBSTR(CARD_CATE_NUM,3)))+1 FROM CARD_INFO WHERE SORT_CARD = #{sortCard} 
+		</selectKey>	
+		INSERT INTO CARD_BENE(BENE_CODE,CARD_CATE_NUM,BENE_TYPE,BENE_LIMIT,BASE_PERFORM,BENE_RATE)
+		VALUES(#{beneCode},#{sortCardSuffix}||LPAD(#{cardCateMaxNumber},5,'0'),#{beneType},${beneLimit},${basePerform},${beneRate}*0.01)
+	</insert>
+		
+	<insert id="deleteCardBenefit" parameterType="ResisteredCardBenefitVO">
+		<selectKey resultType="int" keyProperty="cardCateMaxNumber" order="BEFORE">
+			SELECT MAX(TO_NUMBER(SUBSTR(CARD_CATE_NUM,3)))+1 FROM CARD_INFO WHERE SORT_CARD = #{sortCard} 
+		</selectKey>		
+		DELETE FROM CARD_BENE WHERE CARD_CATE_NUM = #{sortCardSuffix}||LPAD(#{cardCateMaxNumber},5,'0') AND BENE_CODE = #{beneCode} 
+	</insert>	
+	
+	<select id="showTop10CardThisYear" resultType="map">
+		SELECT DISTINCT A.IMG_URL, CARD_NAME, SORT_CARD, B.OWNER_OF_CARD
+		FROM 
+		CARD_IMG_BENE_INFORMATION A,
+		(SELECT COUNT(*) AS OWNER_OF_CARD,CARD_SEG_NUM 
+		FROM CUSTOMER_CARD_INFO
+		WHERE CARD_RES_DUE
+		BETWEEN TO_CHAR(ADD_MONTHS(SYSDATE,-12),'YYYY-MM-DD') AND TO_CHAR(SYSDATE,'YYYY-MM-DD')
+		GROUP BY CARD_SEG_NUM) B
+		WHERE A.CARD_SEG_NUM = B.CARD_SEG_NUM
+		ORDER BY OWNER_OF_CARD DESC	
+	</select>
+	
+	<select id="showTop10CardOneYearAgo" resultType="map">
+		SELECT DISTINCT A.IMG_URL, CARD_NAME, SORT_CARD, B.OWNER_OF_CARD
+		FROM 
+		CARD_IMG_BENE_INFORMATION A,
+		(SELECT COUNT(*) AS OWNER_OF_CARD,CARD_SEG_NUM 
+		FROM CUSTOMER_CARD_INFO
+		WHERE CARD_RES_DUE
+		BETWEEN TO_CHAR(ADD_MONTHS(SYSDATE,-24),'YYYY-MM-DD') AND TO_CHAR(ADD_MONTHS(SYSDATE,-12),'YYYY-MM-DD')
+		GROUP BY CARD_SEG_NUM) B
+		WHERE A.CARD_SEG_NUM = B.CARD_SEG_NUM
+		ORDER BY OWNER_OF_CARD DESC
+	</select>
+	
+	<select id="showMemberIncreasement" resultType="map"> 
+		SELECT A.CUSTOMER AS THIS_YEAR_CUSTOMER ,B.CUSTOMER AS LAST_YEAR_CUSTOMER,C.CUSTOMER AS EVERY_CUSTOMER, ROUND(A.CUSTOMER/B.CUSTOMER,2) AS INCREASE_RATIO 
+		FROM 
+		(SELECT COUNT(*) AS CUSTOMER
+		FROM CUSTOMER_INFO
+		WHERE RES_DATE
+		BETWEEN TO_CHAR(ADD_MONTHS(SYSDATE,-12),'YYYY-MM-DD') AND TO_CHAR(SYSDATE,'YYYY-MM-DD')) A,
+		(SELECT COUNT(*) AS CUSTOMER
+		FROM CUSTOMER_INFO	
+		WHERE RES_DATE
+		BETWEEN TO_CHAR(ADD_MONTHS(SYSDATE,-24),'YYYY-MM-DD') AND TO_CHAR(ADD_MONTHS(SYSDATE,-12),'YYYY-MM-DD')) B,
+		(SELECT COUNT(*) AS CUSTOMER
+		FROM CUSTOMER_INFO) C	
+	</select>
+	
+	<select id="showSpentMoney" resultType="map">	
+		SELECT A.SUM_AMOUNT_OF_BUSI AS YESTERDAY_SPENT_MONEY, B.SUM_AMOUNT_OF_BUSI AS TODAY_SPENT_MONEY,ROUND(B.SUM_AMOUNT_OF_BUSI/A.SUM_AMOUNT_OF_BUSI,3) AS SPENT_MONEY_RATIO 
+		FROM 
+		(SELECT 
+		SUM(AMOUNT_OF_BUSI) AS SUM_AMOUNT_OF_BUSI
+		FROM TRAN_INFO
+		WHERE DATE_OF_USE BETWEEN TO_CHAR(TRUNC(SYSDATE,'dd') - 1,'yyyy-mm-dd hh24-mi-ss') AND TO_CHAR(SYSDATE,'yyyy-mm-dd hh24:mi:ss')) A,
+		(SELECT 
+		SUM(AMOUNT_OF_BUSI) AS SUM_AMOUNT_OF_BUSI
+		FROM TRAN_INFO
+		WHERE DATE_OF_USE BETWEEN TO_CHAR(TRUNC(SYSDATE,'dd') - 2,'yyyy-mm-dd hh24-mi-ss') AND TO_CHAR(SYSDATE-1,'yyyy-mm-dd hh24:mi:ss')) B 
+	</select>
+	
+	<select id="countClustered" resultType="int">
+		SELECT COUNT(DISTINCT CLUSTERED)
+		FROM CLUSTERED_CUSTOMER 		
+	</select>
+	
+	<select id="showRecent7Days" resultType="map">
+		SELECT SUM(AMOUNT_OF_BUSI) AS AMOUNT_OF_BUSI,TO_CHAR(TO_DATE(DATE_OF_USE,'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD')||' '||TO_CHAR(TO_DATE(DATE_OF_USE,'YYYY-MM-DD HH24:MI:SS'),'DAY') AS TRAN_DATE 
+		FROM CARD_CONSUMPTION_HISTORY
+		WHERE TO_DATE(DATE_OF_USE,'YYYY-MM-DD HH24:MI:SS') BETWEEN TRUNC(SYSDATE,'d')-7 AND TRUNC(SYSDATE,'d')
+		GROUP BY TO_CHAR(TO_DATE(DATE_OF_USE,'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD')||' '||TO_CHAR(TO_DATE(DATE_OF_USE,'YYYY-MM-DD HH24:MI:SS'),'DAY') ORDER BY TRAN_DATE	
+	</select>
+	
+	<select id="showRecent4MonthSum" resultType="map">
+		SELECT SUM(AMOUNT_OF_BUSI) AS AMOUNT_OF_BUSI,TO_CHAR(TO_DATE(DATE_OF_USE,'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM')||'월' AS TRAN_MONTH 
+		FROM CARD_CONSUMPTION_HISTORY
+		WHERE TO_DATE(DATE_OF_USE,'YYYY-MM-DD HH24:MI:SS') BETWEEN ADD_MONTHS(TRUNC(SYSDATE,'MM'),-4) AND LAST_DAY(ADD_MONTHS(TRUNC(SYSDATE,'MM'),-1))
+		GROUP BY TO_CHAR(TO_DATE(DATE_OF_USE,'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM')||'월' ORDER BY TRAN_MONTH	
+	</select>
+	<select id="getTodoListSize" parameterType="int" resultType="int">			
+		SELECT COUNT(*) FROM CALENDAR WHERE
+		TO_DATE(START_1,'YYYY-MM-DD HH24:MI:SS')
+		BETWEEN SYSDATE AND SYSDATE+5
+		AND
+		GROUP_ID = ${memberNum}
+		AND READ_STATUS = 'N'
+	</select>
+	<select id="displayClusteredCharacter" parameterType="int" resultType="map">
+		SELECT B.GENDER,TO_NUMBER('20'||SUBSTR(TO_DATE(SYSDATE,'YYYY-MM-DD HH24:MI:SS'),0,2))-TO_NUMBER('19'||SUBSTR(B.IDENTITY,0,2))+1 AS AGE,B.IDENTITY FROM 
+		(SELECT * 
+		FROM CLUSTERED_CUSTOMER  
+		WHERE CLUSTERED = ${clusterNum}) A,
+		CUSTOMER_INFO B
+		WHERE A.MEMBER_NUM = B.MEMBER_NUM	
+	</select>
+	<select id="displayAverageAmount" parameterType="int" resultType="int">
+		SELECT AVERAGE_SUM FROM CLUSTERED_STATIC_VIEW2 WHERE CLUSTERED=${clusterNum}	
+	</select>
+	<select id="displayTop3CardIncluster" parameterType="int" resultType="map">
+		SELECT DISTINCT A.IMG_URL, A.CARD_NAME,B.CARD_OWNER,SORT_CARD 
+		FROM CARD_IMG_BENE_INFORMATION A,
+		(SELECT COUNT(*) AS CARD_OWNER,CARD_SEG_NUM
+		FROM 
+		CUSTOMER_CARD_INFO A,
+		(SELECT MEMBER_NUM 
+		FROM CLUSTERED_CUSTOMER 
+		WHERE CLUSTERED = ${clusterNum} 
+		) B
+		WHERE A.MEMBER_NUM = B.MEMBER_NUM
+		GROUP BY CARD_SEG_NUM) B
+		WHERE A.CARD_SEG_NUM = B.CARD_SEG_NUM
+		ORDER BY B.CARD_OWNER DESC 	
+	</select>
+	<select id="displayTopCategoryCount" parameterType="int" resultType="map">
+		SELECT * FROM CLUSTERED_STATIC_VIEW WHERE CLUSTERED=${clusterNum} ORDER BY COUNT DESC
+	</select>
+	<select id="displayTopCategoryAmount" parameterType="int" resultType="map">
+		SELECT * FROM CLUSTERED_STATIC_VIEW WHERE CLUSTERED=${clusterNum} ORDER BY AMOUNT_OF_BUSI DESC	
+	</select>
+	<select id="displayMemberInfoForMail" parameterType="int" resultType="map">		
+        SELECT SUBSTR(NAME,0,1)||'*'||SUBSTR(NAME,3,4) AS NAME,DECODE(GENDER,'M','남성','F','여성') AS GENDER,SUBSTR(PHONE_NUM,0,INSTR(PHONE_NUM,'-',1,2))||'****' AS PHONE_NUM, EMAIL_ADDRESS,C.CARD_NAME,DECODE(DOMESTIC_STATUS,'Y','국내 거주','N','해외 거주') AS DOMESTIC_STATUS FROM 
+		(SELECT * FROM CLUSTERED_CUSTOMER WHERE CLUSTERED = ${clusterNum}) A,
+		CUSTOMER_INFO B,
+		(SELECT CARD_NAME,A.MEMBER_NUM 
+		FROM 
+		CUSTOMER_CARD_INFO A,CARD_INFO B
+		WHERE A.CARD_SEG_NUM = B.CARD_SEG_NUM) C
+		WHERE A.MEMBER_NUM = B.MEMBER_NUM AND A.MEMBER_NUM = C.MEMBER_NUM		
+	</select>
+	<select id="displayCardName" resultType="string" parameterType="string">
+		SELECT DISTINCT CARD_NAME FROM CARD_INFO WHERE SORT_CARD = #{cardSort}
+	</select>	
+	<select id="displayCardName2" resultType="string">
+		SELECT DISTINCT CARD_NAME FROM CARD_INFO
+	</select>	
+	<select id="displayAliInfoForCardResister" resultType="map">
+		SELECT * FROM CARD_BENEFIT_VIEW
+	</select>
+	<select id="displayCardInfoByConsumeCate" statementType="CALLABLE" parameterType="map">
+		{CALL DISPLAY_CARD_BY_SELECTED_CATEGORY(#{consumeCate},#{selectedCardList,mode=OUT,jdbcType=CURSOR,javaType=ResultSet,resultMap=selectedCardInfoMap})}
+	</select>
+	<select id="displayCardPrefix" parameterType="String" resultType="String">
+		SELECT LPAD(MAX(TO_NUMBER(SUBSTR(CARD_CATE_NUM,3))+1),5,'0') AS CARD_SUFFIX FROM CARD_INFO WHERE SORT_CARD = #{cardSort}
+	</select>
+	<select id="displayCardSegPrefix" resultType="String">
+		SELECT LPAD(MAX(TO_NUMBER(SUBSTR(CARD_SEG_NUM,3))+1),5,'0') AS CARD_SEG_SUFFIX FROM CARD_INFO
+	</select>
+	<insert id="resisterCardInfoInHanaFinder" parameterType="map">
+		INSERT INTO CARD_INFO(CARD_NAME,ANNUAL_FEE_CODE,CARD_CATE_NUM,CARD_SEG_NUM,ANNUAL_FEE,SORT_CARD) VALUES(#{cardName},#{annualFeeCode},#{cardCateNum},#{cardSegNum},${annualFee},#{sortCard})
+	</insert>
+	<insert id="resisterCardComment" parameterType="map">
+		INSERT INTO CARD_COMMENT(CARD_CATE_NUM,COMMENT_OF_CARD) VALUES(#{cardCateNum},#{commentOfCard})
+	</insert>
+	<insert id="resisterCardImgInHanaFinder" parameterType="map">
+		INSERT INTO CARD_IMG(CARD_CATE_NUM,IMG_URL) VALUES(#{cardCateNum},#{imgUrl})
+	</insert>
+			
+</mapper>

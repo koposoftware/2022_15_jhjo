@@ -1,0 +1,287 @@
+@charset "UTF-8";
+@font-face {
+      src : url("/font/Pretendard-ExtraBold.otf"); 
+      font-family: "pretendard";
+}
+@font-face {
+      src : url("/font/HanaB.ttf"); 
+      font-family: "hanaFont";
+}
+
+.sidbarContentInDashBoard{
+      font-family: "hanaFont";
+      font-size:22px; 
+      margin-bottom:3px;
+      margin-top:8px;
+      text-align:center;
+	  color:black;
+	  width:100%;
+	  display:flex;
+	  justify-content:center;
+	  align-items:center;
+}
+.sideBarInDashBoard{
+	  box-shadow:0.8px 0.8px 0.8px 0.8px #E0E0E0;	
+	  border-radius:3px;
+	  padding:5px 5px;
+	  width:90%;
+	  border-radius:10px;
+	  transition-property:box-shadow opacity; 
+	  transition-duration:0.5s;  
+	  cursor:pointer;
+	  display:flex;
+	  justify-content:center;
+	  align-items:center;	
+	  background-color:white;  
+}
+.sideBarInDashBoard:hover{
+	box-shadow:5px 5px 5px 5px grey;
+	opacity:0.5;	
+}
+.sideBarTitleInDashBoard{
+	  font-size:24px;
+      font-family: "pretendard";
+      color:black;   
+}
+#mySidebar{
+	background-color:"#E0E0E0" !important;
+	margin-left:10px;
+	border-radius:10px;	
+	box-shadow:3px 3px 3px 3px grey;
+}
+.dashBoardOnePoint{
+	font-family: "pretendard";
+	margin-top:100px;
+	background: linear-gradient(70deg,#ECEFF1 20%,#FAFAFA);
+	box-shadow:0px 2px 15px grey;		
+	border-radius:5px;
+	font-size:22px;
+	color:black;
+	height:300px;
+	transition-duration:0.8s;
+}
+.dashBoardOnePoint:hover{
+	transform:scale(1.10);	
+}
+
+
+.dashBoardTitleInDIV{
+	color:black;
+	display:flex;
+	justify-content:center;
+	align-items:center;	
+    font-family: "hanaFont";
+	font-size:40px;
+	margin-left:200px;
+}
+
+@media (min-width: 993px){	
+.w3-sidebar.w3-collapse {
+    display: block!;
+}
+}
+
+#container1,#container2{
+    font-family: "hanaFont" !important;
+	transition-duration:0.8s;
+}
+#container1:hover,#container2:hover{
+	transform:scale(1.30);	
+}
+.top10CardTitle{
+    font-family: "hanaFont";
+    font-size:35px;	
+    color:black;
+}
+#top10CardTable{
+      font-family: "pretendard";	
+}
+#dashBoardModalButton{
+	position:absolute; 
+	top:50%; 
+	left:50%;
+  	width:120px; 
+  	height:35px; 
+  	margin-top:-15px; 
+  	margin-left:-60px;
+  	line-height:15px; 
+  	cursor:pointer;
+  	display:none;
+}
+
+.dashBoardModal{ 
+    position:absolute;
+    width:100%;
+    height:300%; 
+    background: rgba(0,0,0,0.4); 
+    top:0; 
+    left:0; 
+    display:none;
+}
+
+.dashBoardModal_content{
+  width:1300px; 
+  height:1500px;
+  background:#fff; 
+  border-radius:10px;
+  position:relative; 
+  top:0%; 
+  left:0%;
+  margin-top:270px; 
+  margin-left:450px;
+  text-align:center;
+  box-sizing:border-box; 
+  padding:30px 0;
+  line-height:23px; 
+  cursor:pointer;
+}
+
+
+.checkCluster{
+	color:blue;
+}
+
+#dashBoardWelcomeButton{
+	 position:absolute; 
+	 top:50%; 
+	 left:50%;
+  	 width:120px; 
+  	 height:30px; 
+  	 margin-top:-15px; 
+  	 margin-left:-60px;
+  	 line-height:15px; 
+  	 cursor:pointer;
+  	 display:none;
+}
+
+
+.dashBoardWelcomeModal{ 
+	position:absolute;
+  	width:100%; 
+  	height:300%; 
+  	background: rgba(0,0,0,0.95); 
+  	top:0; 
+  	left:0; 
+  	display:none;
+}
+
+.dashBoardWelcomeModal_content{
+  	width:600px; 
+  	height:500px;
+  	background:#fff; 
+  	border-radius:10px;
+  	position:relative; 
+  	left:50%;
+  	margin-top:300px; 
+  	margin-left:-200px;
+  	text-align:center;
+  	box-sizing:border-box; 
+  	padding:20px 0;
+ 	line-height:23px; 
+ 	cursor:pointer;
+ 	color:black;
+}
+#top10CardTable{
+     font-family: "pretendard";
+     font-size:20px;
+     color:black;	
+}
+.top10CardImg{
+	cursor:pointer;		
+}
+.top10CardImg{
+	transition-duration:0.8s;	
+}
+.top10CardImg:hover{
+	transform:scale(1.10);
+	opacity:0.6;	
+}
+.wrap{
+	text-align: center; margin-top: 20px;}
+.chatbox {animation: motion 0.3s linear 0s infinite alternate; margin-top: 0;
+}
+.clusteredSelectedCardImageInModal{
+	transition-duration:0.8s;	
+}
+.clusteredSelectedCardImageInModal:hover{
+	transform:scale(1.30);	
+}
+
+#mailSendButtonInModal{
+  	width:180px; 
+  	height:40px; 
+  	line-height:15px; 
+  	cursor:pointer;
+
+  	box-shadow:0px 2px 5px grey;
+  	border-radius:6px;
+  	font-size:27px;
+  	background-color:#81D3B9;
+  	color:white;	
+}
+#mailSendButtonInModal:hover{
+  	background-color:white;
+  	color:black;
+
+}
+
+.mailSendModal{ 
+  	position:absolute; 
+  	width:100%; 
+  	height:300%; 
+  	background: rgba(0,0,0,0.8); 
+  	top:0; 
+  	left:0; 
+  	display:none;
+}
+
+.mailSendModal_content{
+  	width:600px; 
+  	height:700px;
+  	background:#fff; 
+  	border-radius:10px;
+  	position:relative;
+  	top:400px;  
+  	left:50%;
+  	margin-top:-100px; 
+  	margin-left:-200px;
+  	text-align:center;
+  	box-sizing:border-box; 
+  	padding:20px 0;
+  	line-height:23px; 
+  	cursor:pointer;
+}
+#clusterTableList{
+      font-family: "pretendard";
+      font-size:17px;	
+}
+#sendEmail{
+	background-color:white;
+	color:black; 
+}
+#sendEmail:hover{
+	color:white;
+  	background-color:#81D3B9;	
+}
+.buttonDistinctCluster{
+	margin:8px;
+	font-family: "pretendard";
+  	box-shadow:0px 2px 5px grey;
+  	border-radius:6px;
+}
+.buttonDistinctCluster:hover{
+	color:white;
+  	background-color:#81D3B9 !important;		
+}  
+
+
+
+
+a{
+	  text-decoration: none !important;
+}
+@keyframes motion {
+	0% {margin-top: 0px;}
+	100% {margin-top: 4px;}
+}
+

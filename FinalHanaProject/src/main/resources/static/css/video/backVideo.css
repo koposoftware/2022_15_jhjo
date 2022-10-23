@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+@font-face {
+      src : url("/fonts/HanaB.ttf"); 
+      font-family: "hanaFont";
+}
+@font-face {
+      src : url("/fonts/HanaCM.ttf"); 
+      font-family: "hanaFont";
+}
+
+body { 
+	padding: 0px;
+	margin: 0px; 
+}
+
+.jb-box {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	margin: 0px auto;
+	position: relative; 
+	transition-property:height;
+	transition-duration:1.5s;
+}
+
+
+video{
+	display: block;
+	width: 100%;
+	font-family:"hanaFont";
+
+}
+
+#modalVideo{
+	
+}
+
+.jb-text{ 
+	position: absolute;
+	top:60%;
+	width: 100%; 
+}
+.jb-textInModal{
+	position: absolute;
+	top:60%;
+	width: 100%; 
+}
+.jb-textInModal p{
+	font-family: "hanaFont";
+	margin-top: -200px; 
+	text-align: center; 
+	font-size: 48px; 
+	color: #ffffff;
+	
+}
+
+
+
+.jb-text p{
+	font-family: "hanaFont";
+	margin-top: -200px; 
+	text-align: center; 
+	font-size: 48px; 
+	color: #ffffff;
+}
+
+#videoText{
+	opacity:0;
+	font-size:50px;
+	font-family: "hanaFont";
+	font-weight:300;
+}
+#videoTextInModal{
+	border-radius:30px;	
+}
+#notificationBar{
+	font-size:45px;
+	font-family: "hanaFont";
+	font-weight:600;
+}
+
+#video_modal_button{ 
+  position:absolute; 
+  top:50%; 
+  left:50%;
+  width:120px; 
+  height:30px; 
+  margin-top:-15px; 
+  margin-left:-60px;
+  line-height:15px; 
+  cursor:pointer;
+  display:none;
+}
+.video_modal{ 
+  position:absolute; 
+  width:100%; 
+  height:200%; 
+  background: rgba(0,0,0,1.0); 
+  top:0; 
+  left:0; 
+  display:none;
+}
+.video_modal_content{
+  width:1500px; 
+  height:800px;
+  background:#fff; 
+  border-radius:10px;
+  position:relative; 
+  top:10%; 
+  margin-top:40px; 
+  margin-left:200px;
+  text-align:center;
+  box-sizing:border-box; 
+  line-height:23px; 
+  cursor:pointer;
+}
+#modalVideoContainer{
+	box-shadow: 30px 30px 10px black;
+}

@@ -1,0 +1,54 @@
+@charset "UTF-8";
+@font-face {
+      src : url("/font/HanaB.ttf"); 
+      font-family: "hanaFont";
+}
+@font-face {
+      src : url("/font/Pretendard-ExtraBold.otf"); 
+      font-family: "pretendard";
+}
+#administrator{
+	background-color:white;
+	font-family: "pretendard";
+	font-size:18px;
+	
+}
+#user{
+	background-color:white;
+	font-family: "pretendard";
+	font-size:18px;
+
+}
+#administrator:click{
+	background-color:#008675;
+}
+#user:click{
+	background-color:#008675;
+}
+
+button{
+	border:0;
+	outline:0;
+	font-family: "hanaFont";
+}
+
+.button:hover{
+	background-color:#008675;	
+}
+
+h2{
+	font-family: "hanaFont";
+}
+#login{
+	font-family: "hanaFont";
+	font-size:16px;
+	font-weight: 600;
+	box-shadow:0.5px 0.5px 0.5px 0.5px gray;
+	border-radius:5px;
+}
+#login:hover{
+	font-family: "hanaFont";
+	color:white;
+	background-color:#81D3B9;
+}
+

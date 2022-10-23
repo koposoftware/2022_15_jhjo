@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+  <mapper namespace="kr.ac.kopo.dao.CardDAO">
+  	<resultMap type="kr.ac.kopo.vo.CardVO" id="cardMap">
+  		<result column="CARD_NAME" property="cardName"/>
+  	 	<result column="CARD_NUM" property="cardNum"/> 
+  	    <result column="CARD_VALID_DATE" property="cardValidDate"/>
+  	    <result column="CARD_CVC_NUM" property="cardCvcNum"/>
+  	    <result column="CARD_IMG_URL" property="cardImgUrl"/>
+  	    <result column="CARD_CATE_NUM" property="cardCateNum"/>
+  	</resultMap>
+  	
+  	<resultMap type="kr.ac.kopo.vo.ObtainedBenefitVO" id="obtainedBenefitMap">
+  		<result column="SMALL_CATE" property="smallCate"/>
+  		<result column="CARD_BENEFIT" property="cardBenefit"/>
+  		<result column="ALI_TYPE" property="aliType"/>
+  	</resultMap>
+  	
+  	
+  
+  	<select id ="showCardImage" resultType="hashmap">
+		SELECT A.IMG_URL,B.CARD_NAME,B.ANNUAL_FEE,B.CARD_CATE_NUM,B.SORT_CARD,C.COMMENT_OF_CARD
+		FROM CARD_IMG A, CARD_INFO B,CARD_COMMENT C 
+		WHERE A.CARD_CATE_NUM = B.CARD_CATE_NUM AND C.CARD_CATE_NUM=A.CARD_CATE_NUM GROUP BY A.IMG_URL,B.CARD_NAME,B.ANNUAL_FEE,B.CARD_CATE_NUM,B.SORT_CARD,C.COMMENT_OF_CARD
+		ORDER BY B.CARD_CATE_NUM
+  	</select> 
+  	<select id ="showInfoAboutCard" resultType="hashmap" parameterType="string">
+		SELECT A.IMG_URL,B.CARD_NAME,B.ANNUAL_FEE,B.CARD_CATE_NUM,B.SORT_CARD,C.COMMENT_OF_CARD
+		FROM CARD_IMG A, CARD_INFO B,CARD_COMMENT C 
+		WHERE A.CARD_CATE_NUM = B.CARD_CATE_NUM AND C.CARD_CATE_NUM=A.CARD_CATE_NUM AND C.CARD_CATE_NUM=#{cardCateNum} 
+		GROUP BY A.IMG_URL,B.CARD_NAME,B.ANNUAL_FEE,B.CARD_CATE_NUM,B.SORT_CARD,C.COMMENT_OF_CARD
+		ORDER BY B.CARD_CATE_NUM
+  	</select> 
+ 	<select id ="cardDetailInModal" resultType="hashmap" parameterType="string">
+		SELECT 
+		A.COMMENT_OF_CARD,B.CARD_NAME,TO_CHAR(C.BENE_RATE*100) AS DISCOUNT, C.ALI_TYPE,C.SMALL_CATE,B.ANNUAL_FEE,C.BENE_LIMIT,B.CARD_CATE_NUM
+		FROM CARD_COMMENT A,CARD_INFO B,CARD_DETAIL_BENEFIT C 
+		WHERE B.CARD_CATE_NUM = C.CARD_CATE_NUM AND B.CARD_CATE_NUM = #{cardCateNum} AND A.CARD_CATE_NUM = B.CARD_CATE_NUM
+		GROUP BY B.CARD_NAME,TO_CHAR(C.BENE_RATE*100),C.ALI_TYPE,C.SMALL_CATE,B.ANNUAL_FEE,C.BENE_LIMIT,B.CARD_CATE_NUM,A.COMMENT_OF_CARD
+		ORDER BY C.SMALL_CATE
+ 	</select>
+   	<select id ="showCardDetail" resultType="hashmap">
+ 		SELECT A.IMG_URL, B.CARD_NAME,TO_CHAR(C.BENE_RATE*100) AS DISCOUNT, C.ALI_TYPE,C.SMALL_CATE,B.ANNUAL_FEE,C.BENE_LIMIT,A.CARD_CATE_NUM,B.SORT_CARD
+		FROM CARD_IMG A,CARD_INFO B,CARD_DETAIL_BENEFIT C
+		WHERE A.CARD_CATE_NUM = B.CARD_CATE_NUM AND B.CARD_CATE_NUM = C.CARD_CATE_NUM 
+    </select>  
+    <select id = "showNetworkImg" resultType="hashmap" parameterType="string">
+		SELECT A.CARD_NAME,IMG_URL,A.ANNUAL_FEE,C.NETWORK
+		FROM
+		CARD_INFO A,NETWORK_IMG B,ANNUAL_FEE C
+		WHERE CARD_CATE_NUM =(SELECT CARD_CATE_NUM
+		FROM CARD_INFO WHERE CARD_CATE_NUM = #{cardCateNum} GROUP BY CARD_CATE_NUM)
+		AND A.ANNUAL_FEE_CODE = B.ANNUAL_FEE_CODE AND B.ANNUAL_FEE_CODE = C.ANNUAL_FEE_CODE
+    </select>
+    <select id ="showCardDetailImg" resultType="hashmap" parameterType="string">
+    	SELECT * FROM CARD_IMG
+    	WHERE CARD_CATE_NUM = #{cardCateNum}
+    </select>
+    
+    <select id="showMyCard" statementType="CALLABLE" parameterType="map">
+    	{CALL SHOW_MY_CARD_BENEFIT(${memberNum}, #{myCardInfoList,mode=OUT,jdbcType=CURSOR,javaType=ResultSet,resultMap=cardMap})}
+    </select>
+    
+    <select id="showMyRecentConsumeTrand_c" resultType="int" parameterType="int">
+    	SELECT SUM(AMOUNT_OF_BUSI) FROM CARD_CONSUMPTION_HISTORY
+		WHERE MEMBER_NUM =#{memberNum} AND TO_DATE(DATE_OF_USE,'YYYY-MM-DD HH24:MI:SS') BETWEEN (TRUNC(SYSDATE,'MM')) AND LAST_DAY((TRUNC(SYSDATE,'MM')))
+    </select>
+    <select id="showMyRecentConsumeTrand_1" resultType="int" parameterType="int">
+    	SELECT SUM(AMOUNT_OF_BUSI) FROM CARD_CONSUMPTION_HISTORY
+		WHERE MEMBER_NUM =#{memberNum} AND TO_DATE(DATE_OF_USE,'YYYY-MM-DD HH24:MI:SS') BETWEEN ADD_MONTHS(TRUNC(SYSDATE,'MM'),-1) AND LAST_DAY(ADD_MONTHS(TRUNC(SYSDATE,'MM'),-1))
+    </select>
+    <select id="showMyRecentConsumeTrand_2" resultType="int" parameterType="int">
+    	SELECT SUM(AMOUNT_OF_BUSI) FROM CARD_CONSUMPTION_HISTORY
+		WHERE MEMBER_NUM =#{memberNum} AND TO_DATE(DATE_OF_USE,'YYYY-MM-DD HH24:MI:SS') BETWEEN ADD_MONTHS(TRUNC(SYSDATE,'MM'),-2) AND LAST_DAY(ADD_MONTHS(TRUNC(SYSDATE,'MM'),-2))
+    </select>
+    <select id="showMyCardBenefit" resultType="hashMap" parameterType="string">
+    	SELECT CARD_CATE_NUM,SMALL_CATE FROM CARD_DETAIL_BENEFIT WHERE CARD_CATE_NUM=#{cardCateNum} GROUP BY SMALL_CATE,CARD_CATE_NUM
+    </select>
+    <select id="showMyRecentConsumeTransaction" resultType="hashMap" parameterType="int">
+    	SELECT * FROM CARD_CONSUMPTION_HISTORY WHERE MEMBER_NUM =${memberNum} ORDER BY DATE_OF_USE DESC
+    </select>
+    <select id="findLastWeekConsume" resultType="hashMap" parameterType="string">
+		SELECT SMALL_CATE,MIDDLE_CATE,LARGE_CATE,AMOUNT_OF_BUSI,SUBSTR(DATE_OF_USE,0,10)||' '|| TO_CHAR(TO_DATE(DATE_OF_USE,'YYYY-MM-DD HH24:MI:SS'),'DAY') AS DATE_OF_USE FROM CARD_CONSUMPTION_HISTORY
+		WHERE CARD_NUM =#{cardNum} AND TO_DATE(DATE_OF_USE,'YYYY-MM-DD HH24:MI:SS') BETWEEN TRUNC(SYSDATE,'d')-7 AND TRUNC(SYSDATE,'d')
+		ORDER BY DATE_OF_USE
+    </select>   
+    <select id="obtainedCardBenefit" statementType="CALLABLE" parameterType="map">
+    	{CALL CALC_CARD_CATE_BENEFIT(#{cardNum}, #{obtainedCardBenefitList,mode=OUT,jdbcType=CURSOR,javaType=ResultSet,resultMap=obtainedBenefitMap})}
+   	</select> 
+   	<select id="obtainedCardBenefit_3" statementType="CALLABLE" parameterType="map">
+    	{CALL CALC_CARD_CATE_BENEFIT_3(#{cardNum}, #{obtainedCardBenefitList,mode=OUT,jdbcType=CURSOR,javaType=ResultSet,resultMap=obtainedBenefitMap})}
+   	</select> 
+   	<select id="showCardConsumeGraph2" parameterType="string" resultType="hashMap">
+		SELECT LARGE_CATE,SMALL_CATE,SUM(AMOUNT_OF_BUSI) AS AMOUNT_OF_BUSI
+		FROM CARD_CONSUMPTION_HISTORY
+		WHERE TO_DATE(DATE_OF_USE,'YYYY-MM-DD HH24:MI:SS') BETWEEN ADD_MONTHS(TRUNC(SYSDATE,'MM'),-3) AND LAST_DAY(ADD_MONTHS(TRUNC(SYSDATE,'MM'),-1))
+		AND CARD_NUM =#{cardNum}
+		GROUP BY LARGE_CATE,SMALL_CATE	
+		ORDER BY LARGE_CATE
+   	</select>
+	<select id="showSelectedCardBeneAli" statementType="CALLABLE" parameterType="map">
+   		{CALL CALC_SELECTED_CARD_BENEFIT_ALI(${memberNum},#{cardNum},#{cardCateNum},#{obtainedBenefitList,mode=OUT,jdbcType=CURSOR,javaType=ResultSet,resultMap=obtainedBenefitMap})}
+   	</select>
+   	 
+  </mapper>  

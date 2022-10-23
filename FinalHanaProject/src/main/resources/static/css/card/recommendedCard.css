@@ -1,0 +1,1001 @@
+@charset "UTF-8";
+@font-face {
+      src : url("/font/HanaB.ttf"); 
+      font-family: "hanaFont";
+}
+@font-face {
+      src : url("/font/HanaCM.ttf"); 
+      font-family: "hanaCMFont";
+}
+@font-face {
+      src : url("/font/Pretendard-ExtraBold.otf"); 
+      font-family: "pretendard";
+}
+
+:root{
+	--box-shadow: 0 7px 20px gray;
+}
+
+
+#recommendedCardButton{ 
+    position:absolute;
+  	top:40%;
+    left:50%;
+  	width:120px;
+    height:30px;
+    margin-top:-10px;
+    margin-left:-60px;
+    line-height:15px;
+    cursor:pointer;
+    display:none;
+}
+
+.recommendedCard_modal{ 
+  position:absolute;
+  width:100%;
+  height:200%; 
+  background: rgba(0.1,0.1,0.1,1.0); 
+  top:0; 
+  left:0; 
+  display:none;
+  opacity:1.0;
+}
+
+.recommendedCard_modal_content{
+  width:500px; 
+  height:450px;
+  background:#fff; 
+  border-radius:10px;
+  position:relative; 
+  top:10%; 
+  left:50%;
+  margin-top:200px; 
+  margin-left:-250px;
+  text-align:center;
+  box-sizing:border-box; 
+  padding:0 0;
+  line-height:23px; 
+  cursor:pointer;
+  opacity:1.0;
+}
+.animatedBoxImage{
+	width:300px;
+	height:300px;
+}
+
+.recommendModalTitle{
+	font-family: "hanaFont";
+	font-size:25px;
+	letter-spacing: 2px;
+	word-spacing: 2px;
+	line-height:30px;
+}
+.radius_img_2 {
+	border-radius:50%;
+	width:120px;
+	height:120px;
+	position:fixed;
+	top:780px;
+	left:1730px;
+	cursor:pointer;
+	opacity:1.0;
+	transition-duration:1.0s;
+}
+.radius_img_2:hover{
+	opacity:0.8;
+	transform:scale(1.50);
+}
+
+#recommendedCardBackground{
+	position: relative;
+}
+
+#recommendedCardBackground::before{
+	content: "";
+	background-size: cover;
+	opacity:0.3;
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+}
+.cardCart{
+	font-family: "hanaFont";
+	font-size:24px;
+	color:black;
+}
+.addSelectedCardInMyCart{
+	font-family: "hanaFont";
+	font-size:30px;
+	background-color:#B2DFDB;
+	box-shadow: 1px 1px 3px 1px gray;
+	border-radius:10px;
+	width:180px;
+	height:30px;
+	margin-bottom:15px;
+	margin-left:200px;
+}
+.addSelectedCardInMyCart:hover{
+	background-color:#FBE9E7;
+	color:black;
+}
+.addSelectedCardInMyCart{
+	background-color:E0F2F1;
+}
+
+.menu_btn{
+    text-align: right;
+    padding: 10px;
+}
+.menu_bg{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.1);
+    position: absolute;
+    top:0;
+    display: none;
+}
+.sidebar_menu{
+    display: none;
+    width: 30%;
+    height: 100%;
+	background: linear-gradient(175deg,white 30%,#EFEBE9 70%);
+    position: absolute;
+    top:0;
+    right: -50%;  
+    border-radius:15px;
+    box-shadow: 20px 20px 20px 20px gray;  
+}
+.close_btn{
+	width: 25px;
+    height: 25px;
+    margin:10px;
+}
+.close_btn > a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.menu_wrap{
+    list-style: none;
+    padding: 20px 20px;
+
+}
+.menu_wrap li a{
+    color: black;
+    text-decoration: none;
+}
+
+.recommendedCardName{
+	background-color:#ECEFF1;
+ 	font-family: "pretendard";
+	font-size:26px;
+	width:80%;
+	border-radius:15px;
+	box-shadow: 1px 1px 3px 1px #dadce0 inset; 
+	cursor: pointer;
+}
+
+.center_div{
+	background: linear-gradient(45deg,white,#EFEBE9 10%, white);
+	width:90%;
+	height:800px;
+	margin-left:100px;
+	border-radius:30px;
+	box-shadow: 1px 1px 3px 1px #dadce0 inset;
+}
+.informationAboutSlick_div{
+	margin-right:100px;
+	margin-bottom:5px;
+}
+.informationAboutSlick{
+   font-family: "hanaFont";
+   font-size:20px;		
+}
+.center2_div{
+ 	background: linear-gradient(45deg,white,#EFEBE9 10%,white);
+	width:90%;
+	height:800px;
+	margin-left:100px;
+	border-radius:30px;
+	box-shadow: 1px 1px 3px 1px #dadce0 inset;
+}
+.recommendedCardImg{
+	width:500px;
+}
+
+#questionAboutCard_div{
+	margin-bottom:50px;
+}
+#recommendMessage{
+   font-family: "hanaFont";
+   font-size:50px;	
+   margin-bottom:100px;
+   padding-top:100px;
+}
+#recommendMessage2{
+	margin-top:200px;
+
+}
+#recommendMessage3{
+	margin-top:200px;
+
+}
+
+#marketingMessage{
+   font-family: "hanaFont";
+   font-size:30px;	
+}
+#questionAboutCard{
+   margin-top:50px;
+   font-family: "hanaFont";
+   font-size:20px;	
+}
+
+#RecommendedCreditTitle{
+   font-family: "pretendard";
+   font-size:36px;
+   box-shadow: 1px 1px 3px 1px #dadce0 inset;	
+   border-radius:10px;
+   padding:10px 10px;
+}
+#RecommendedCreditTitle2{
+   margin-top:60px;
+   font-family: "pretendard";
+   font-size:36px;	
+   box-shadow: 1px 1px 3px 1px #dadce0 inset;
+   border-radius:10px;
+   padding:10px 10px;
+}
+.savingMoney{
+	text-align:center;
+	background-color:#E0F2F1;
+	border-radius:15px;
+	font-family: "hanaFont";
+	font-size:24px;	
+	width:90%;
+	margin-bottom:20px;
+	box-shadow: 1px 1px 3px 1px #dadce0 inset;	
+}
+.howSaving{
+	font-size:24px;
+	color:red;
+}
+
+.recommendedMyCreditList{
+	cursor: pointer;		
+}
+.recommendedMyCheckList{
+	cursor: pointer;	
+}
+.medalImage{
+	width:50px;
+	position:relative;
+}
+.front{
+	position:absolute;
+	width:30px;
+}
+.back{
+	position:absoloute;
+	top:0;
+	left:0;
+}
+
+.recommendCardbox{
+	position:relatvie;
+	transition-property:opacity,transform;
+	transition-duration:1.0s;
+}
+.recommendCardbox:hover{
+	transform:scale(1.05);
+	opacity:0.8
+}
+
+.frontImage{
+	width:150px;
+}
+.backImage{
+	width:400px;
+	box-shadow:var(--box-shadow);
+	border-radius:15px;
+}
+.recommendedCardSlick{
+	margin-top:70px;
+}
+.RecommenddetailBenefitList{
+	margin-top:2px;
+	align-items:center;
+	width:100%;
+	font-family: "hanaFont";
+	font-size:20px;
+
+}
+.recommendedSmallCate{
+	background-color:#FAFAFA;
+	border-radius:8px;	
+	width:100%;
+	align-items:center;
+	font-size:20px;	
+	box-shadow: 1px 1px 3px 1px #dadce0 inset;
+	cursor: pointer;	
+}
+.RecommendedPrice{
+	background-color:white;
+	border-radius:10px;
+	width:320px;
+	font-size:20px;	
+	cursor: pointer;
+	border-color: black;
+	height:90%;
+}
+.RecommendedDetailPrice{
+	border-radius:3px;
+	color:red;
+	font-size:24px;
+	cursor: pointer;	
+}
+.recommendedInfo{
+ 	height:0px;
+	overflow-y: hidden;
+}
+
+#detailRecommendedCardModal_button{
+	position:absolute;
+	top:50%;
+	left:50%;
+    width:120px;
+    height:30px; 
+    margin-top:-15px; 
+    margin-left:-60px;
+    line-height:15px;
+    cursor:pointer;
+    display:none;
+}
+.detailRecommendedCardModal{
+	  position:absolute;
+	  width:100%; 
+	  height:400%; 
+	  background: rgba(0,0,0,0.6); 
+	  top:200px; 
+	  left:0; 
+	  display:none;
+}
+.detailRecommendedCardModal_content{
+  width:1600px; 
+  height:3000px;
+  background:white;
+  border-radius:10px;
+  position:relative; 
+  top:0%; 
+  left:0%;
+  margin-top:100px; 
+  margin-left:150px;
+  text-align:center;
+  box-sizing:border-box; 
+  padding:10px 0;
+  line-height:23px; 
+  cursor:pointer;
+}
+#recommendedCardAnalysisModalTitle{
+	font-family: "pretendard";
+	font-size:40px;
+	margin-top:80px;
+	width:900px;
+	height:80px;
+	margin-left:360px;
+	border-radius:15px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+.underBarAnalysisModalTitle{
+	margin-bottom:80px;
+}
+#recommendedCardAnalysisScript{
+	font-family: "pretendard";
+	font-size:40px;
+	margin-top:30px;
+	margin-bottom:20px;
+}
+
+.comparedImage{
+	cursor:pointer;
+	border-radius:15px;
+	box-shadow: 0px 5px 20px gray;  
+	width:100%;
+	transition-duration:1s;
+	opacity:1;
+}
+
+.comparedImage:hover{
+	transform:scale(1.20);
+	opacity:0.7;
+}
+
+.cardCompare{
+	margin-top:150px;
+}
+
+.comparedSection{
+	box-shadow: 1px 1px 3px 1px #dadce0 inset;
+	margin-top:500px;
+	border-radius:30px;
+	height:120%;
+	padding:0px;
+	background: #FAFAFA;
+}
+
+.comparedWithMyCard{
+	box-shadow: 1px 1px 3px 1px #dadce0 inset;
+	border-radius:30px;
+	height:120%;	
+	padding:0px;
+ 	background: #FAFAFA;
+ 	width: 49% !important;
+}
+
+#recommendedDetailCardTitleInModal{
+	font-size:24px;
+	font-family: "pretendard";
+}
+
+#recommendedDetailCardCommentInModal{
+	font-size:20px;
+	font-family: "pretendard";
+}
+
+#recommendedDetailCardSort{
+	background-color:white;
+	box-shadow: 1px 1px 3px 1px #dadce0 inset;
+	border-radius:10px;
+	font-size:27px;
+	font-family: "hanaFont";
+	width:300px;
+	height:40px;
+	justify-content : center;
+  	align-items : center;
+	display : flex;
+}
+
+.explanation{
+	font-size:20px;	
+	font-family: "pretendard";
+	margin-left:180px;
+}
+
+.myCardNotice{
+	box-shadow: 0 5px 10px gray;
+	font-size:24px;	
+	font-family: "pretendard";
+	margin-bottom:30px;
+	margin-top:40px;
+	height:50px;
+	justify-content : center;
+  	align-items : center;
+	display : flex;
+	border-radius:10px;
+	width:300px;
+	background-color:#F5F5F5;
+}
+
+.comparedSectionBenefitList{
+	font-size:24px;	
+	font-family: "pretendard";
+	box-shadow: 1px 1px 3px 1px #dadce0 inset;
+	background-color:white;
+	width:300px;
+	height:60px;
+	justify-content : center;
+  	align-items : center;
+	display : flex;
+	border-radius:8px;
+}
+
+.comparedSectionCardBenefit{
+	font-size:24px;	
+	font-family: "pretendard";
+	color:black;
+	border-radius:15px;
+	align-items: center;
+}
+
+.comparedSectionSmallCate{
+	background-color:white;
+	box-shadow: 1px 1px 3px 1px #dadce0 inset;
+	font-size:16px;	
+	font-family: "pretendard";
+	border-radius:15px;
+	height:40px;
+  	justify-content : center;
+  	align-items : center;
+	display : flex;
+}
+
+.comparedSectionSmallCate_2{
+	background-color:white;
+	box-shadow: 1px 1px 3px 1px #dadce0 inset;
+	font-size:16px;	
+	font-family: "pretendard";
+	border-radius:15px;
+	height:40px;
+  	justify-content : center;
+  	align-items : center;
+	display : flex;
+}
+
+
+.detailPriceNumber{
+	color:#008485;
+}
+
+.myCardNumInRecommendedTitle{
+	font-family: "hanaFont";
+	font-size:24px;
+}
+
+.myCardNumInRecommended{
+	font-family: "pretendard";
+	box-shadow: 1px 1px 3px 1px #dadce0 inset;
+	font-size:17px;
+	width:300px;
+	height:42px;
+	justify-content : center;
+  	align-items : center;
+	display : flex;
+	border-radius:10px;
+	background-color:white;	
+}
+
+.myCardValidDate{
+	font-family: "pretendard";
+	box-shadow: 1px 1px 3px 1px #dadce0 inset;
+	font-size:22px;
+	width:300px;
+	height:30px;
+	justify-content : center;
+  	align-items : center;
+	display : flex;
+	border-radius:10px;
+	background-color:white;
+}
+
+.recommendedSmallCateAliType{
+	font-family: "pretendard";
+	font-size:20px;		
+}
+
+.monthSum{
+	font-family: "pretendard";
+	box-shadow: 1px 1px 3px 1px #dadce0 inset;
+	font-size:24px;
+	height:40px;
+	letter-spacing: 1px;
+	word-spacing: 1px;
+	line-height:30px;
+	border-radius:10px;
+	margin-bottom:20px;
+	background-color:#F8F8FF;
+	justify-content : center;
+  	align-items : center;
+	display : flex;
+}
+
+.monthSum>span{
+	color:red;
+}
+
+/* 찜하기 클릭하면 장바구니에 담기는 css */
+
+#addCartNoticeModalButton{
+  position:absolute; 
+  top:0%; 
+  left:50%;
+  width:120px; 
+  height:30px; 
+  margin-top:30px; 
+  margin-left:-60px;
+  line-height:15px; 
+  cursor:pointer;
+  display:none;
+}
+
+.addCartNoticeModal{ 
+  position:absolute; 
+  width:100%; 
+  height:300%; 
+  background: rgba(0,0,0,0.9); 
+  top:0; 
+  left:0; 
+  display:none;
+}
+
+.addCartNoticeModal_content{
+  width:400px; 
+  height:300px;
+  background:#fff; 
+  border-radius:10px;
+  position:relative; 
+  left:50%;
+  margin-top:600px;
+  margin-left:-200px;
+  text-align:center;
+  box-sizing:border-box; 
+  padding:10px 0; 
+  cursor:pointer;
+  font-family: "hanaFont";
+  font-size:32px; 
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  line-height:40px;
+}
+
+.addCartNoticeModalImage{
+	width:180px;
+}
+
+.deleteWishedCardDIV{
+	margin-top:10px;
+}
+
+.deleteWishedCard{
+	box-shadow: 1px 1px 3px 1px #dadce0 inset;
+	background-color:#E0F2F1;
+	font-size:24px;
+	border-radius:15px;
+	width:300px;
+	color:black;
+}
+
+.deleteWishedCard:hover{
+	background-color:#81D3B9;
+	color:white;
+	font-size:24px;
+	border-radius:15px;
+	width:300px;
+}
+
+.cardCartTitle{
+	font-family: "pretendard";
+	font-style: normal;
+    font-size:32px;
+    justify-content : center;
+  	align-items : center;
+	display : flex; 
+	letter-spacing: 1px;
+ 	word-spacing: 1px;
+  	line-height:40px;	
+}
+
+.addedMyCardName{
+    font-family: "pretendard";
+	font-style: normal;
+    font-size:24px; 
+}
+
+.addedMyCardComment{
+    font-family: "pretendard";
+	font-style: normal;
+	font-size:20px; 
+}
+
+.cardImgInMyCart{
+	transition-duration:0.8s;
+	opacity:1;
+	cursor:pointer;
+}
+
+.cardImgInMyCart:hover{
+	transform:scale(1.10);
+	opacity:0.8;
+}
+
+.addedCartSum{
+	font-family: "pretendard";
+	font-style: normal;
+	font-size:22px;	
+	letter-spacing: 1px;
+ 	word-spacing: 1px;
+  	line-height:40px;
+}
+
+.addedCartSum>span{
+	font-family: "pretendard";
+	font-style: normal;
+	font-size:26px;
+	color:red;
+}
+
+.recommendedGraph{
+	font-family: "pretendard";
+	font-size:26px;
+	box-shadow: 1px 1px 3px 1px #dadce0 inset;
+	background-color:white;
+	border-radius:10px;	
+}
+
+.recommendedGraphImage1{
+	font-family: "pretendard";
+	font-size:26px;	
+	box-shadow: 1px 1px 3px 1px #dadce0 inset;
+	background-color:white;
+	border-radius:10px;
+}
+
+.recommendedGraphImage2{
+	font-family: "pretendard";
+	font-size:26px;	
+	box-shadow: 1px 1px 3px 1px #dadce0 inset;
+	background-color:white;
+	border-radius:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.highcharts-figure,
+.highcharts-data-table table {
+    min-width: 320px;
+    max-width: 700px;
+    margin: 1em auto;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+
+.aliImageCircle{
+	width: 60px;	
+	height: 60px;	
+	border-radius: 50%;
+	background-color: white;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin-left: 27px;
+	transition-duration:0.8s;
+}
+
+.aliImageCircle:hover{
+	opacity:0.8;
+	transform:scale(1.20);	
+}
+
+.aliIcon{
+	transition-duration:0.8s;
+    width:60px;
+}
+
+.aliIcon:hover{
+	opacity:0.8;
+	transform:scale(1.20);
+}
+
+.multiTitle{
+	justify-content : center;
+  	align-items : center;
+  	display : flex;
+  	background-color:white;
+	width:40%;
+	box-shadow: 1px 1px 3px 1px #dadce0 inset;	
+	padding:5px 5px;
+	border-radius:8px;
+	margin-left:600px;
+}
+
+#multiCardSection{
+    font-family: "pretendard";
+    font-size:30px;	
+}
+
+.multiCardDescription{
+	box-shadow: 1px 1px 3px 1px #dadce0 inset;
+	background-color:white;
+	border-radius:10px;
+}
+
+.multiCardCombination{
+	box-shadow: 1px 1px 3px 1px #dadce0 inset;
+	background-color:#F5F5F5;
+	border-radius:10px;
+	height:100%;
+}
+
+.recommendedMultiCardName{
+  	 font-family: "pretendard";
+     font-size:24px;
+     background-color:white;
+     border-radius:10px;	
+}
+
+.multiCardImage{
+    cursor:pointer;
+	transition-duration:0.8s;    
+}
+
+.multiCardImage:hover{
+	opacity:0.8;
+	transform:scale(1.05);	
+}
+
+.recommendedMultiCardComment{
+	font-size:16px;
+}
+
+.mutliCardBenefit{
+	background-color:white !important;
+	width:80% !important;
+	border-radius:10px !important;
+	font-size:24px;
+	height:60px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+.mutliCardBenefit>span{
+	color:red;
+}
+
+.multiCardDetailDescription{
+	font-size:19px;
+}
+
+.noticeAboutMultiCard{
+     font-size:16px;	
+}
+
+.multiCardDetailBenefit{
+	display:inline-flex;
+	justify-content:center;
+	align-items:center;	
+}
+
+.multiCardDetailBenefitForArrow{
+	background-color:white;
+	border-radius:2px;
+	font-size:22px;
+	width:300px;
+}
+
+.multiCardDetailBenefitForArrow>span{
+	color:red;
+	font-size:20px;
+}
+
+.multiCombinationRecommend{
+	font-size:24px;
+}
+
+.moveMultiCardDetailDescription{
+	margin-top:10px;
+	margin-bottom:10px;
+	font-size:18px;	
+}
+
+#container2>text{
+  	font-family: "pretendard" !important;	
+}
+
+#container2{
+	font-family: "pretendard" !important;
+}
+
+
+#container3>text{
+  	font-family: "pretendard" !important;	
+}
+
+#findInformationButton1{
+	background-color:#EEEEEE;
+	color:black;
+	border:none;
+}
+
+#findInformationButton1:hover{
+	background-color:#81D3B9;
+	color:white;	
+}
+
+#findInformationButton2{
+	background-color:#EEEEEE;
+	color:black;
+	border:none;	
+}
+
+#findInformationButton2:hover{
+	background-color:#81D3B9;
+	color:white;		
+}
+
+
+
+.recommendedCardInSameAge{
+	cursor:pointer;
+	transition-duration:0.8s; 	
+}
+
+.recommendedCardInSameAge:hover{
+	transform:scale(1.20);
+	opacity:0.8	
+}
+
+#clusterButtonAboutModal{ 
+	position:absolute; 
+	top:50%; 
+	left:50%;
+  	width:120px; 
+  	height:30px; 
+  	margin-top:-15px; 
+  	margin-left:-60px;
+  	line-height:15px; 
+  	cursor:pointer;
+  	display:none;
+}
+
+.clusterNoticeAboutModal{ 
+  	position:absolute; 
+  	width:100%; 
+  	height:1200%; 
+  	background: rgba(0,0,0,0.6); 
+  	top:0; 
+  	left:0; 
+  	display:none;
+}
+
+.clusterNoticeAboutModal_content{
+  	width:400px; 
+  	height:200px;
+  	background:#fff; 
+  	border-radius:10px;
+  	position:relative; 
+  	left:50%;
+ 	margin-top:4400px; 
+ 	margin-left:-200px;
+ 	text-align:center;
+    box-sizing:border-box; 
+    padding:20px 0;
+    line-height:23px; 
+    cursor:pointer;
+}
+
