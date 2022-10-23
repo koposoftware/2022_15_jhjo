@@ -213,8 +213,8 @@
 <br>
 <center><img src="tech5.png"></center>
 <div style="display:flex; align-items: center; margin-left:70px;">
-  <img src="tech6.png">
-  <img src="tech7.png">
+  <img src="tech6.png" style="margin:5px">
+  <img src="tech7.png" style="margin:5px">
 </div>
 <br>
 
