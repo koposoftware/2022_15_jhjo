@@ -150,7 +150,15 @@
 # <center> <b>3.프로젝트 결과</b> </center>
 
 <br>
+<hr>
 
+## <center> 서비스 </center>
+
+<img src="customer_service.png">
+<br>
+<img src="admin_service.png">
+<br>
+<hr>
 
   
 ### <center> <b>[손님]
