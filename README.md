@@ -113,7 +113,7 @@
 
 # 사용 기술
 
-<img src="skill.png" style="margin-left:50%;">
+<img src="skill.png">
 
  *  Spring-MVC 기반 웹 개발<br>
  *  Python을 활용한 가상의 데이터 생성<br>
@@ -141,7 +141,7 @@
 
 # 시스템 아키텍처
 
-<img src="architecture.png" style="margin-left:50%;">
+<img src="architecture.png">
 
 
 <hr>
@@ -301,7 +301,6 @@
 |skill set| Frontend - HTML, CSS, Javascript|
 | | Backend - Java, Spring, Oracle Database|
 | |dataAnalysis - Python,R|
-|학력|졸업(2022.02)|충남대학교 통계학과|
 |자격증|2021년 사회조사분석사 2급|
 | |2021년 ADSP|
 | |2022년 SQLD|
