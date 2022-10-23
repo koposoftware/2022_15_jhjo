@@ -1,5 +1,5 @@
 
-<center># 마이데이터 기반 카드 추천 서비스</center>
+# <center><b>  마이데이터 기반 카드 추천 서비스 </b></center> 
 
 <img src="logo.png" style="width:300px;">
 
@@ -9,7 +9,7 @@
 
 # <center> 1. 프로젝트 배경 및 목적</center>
 <hr>
-#  프로젝트 배경
+#  <b>프로젝트 배경</b>
 <div style="display:flex; align-items: center; margin-left:60px;"> 
 <img src="article1.png" style="width:230px; margin:5px;">
 <img src="article2.png" style="width:200px; margin:5px;">
@@ -27,7 +27,7 @@
 
 # 목적
 
-## [사용자]
+## <b>[사용자]</b>
 
  마이데이터 사업이 확장되고 있고 비대면 서비스가 확산함에 따라 
 현금 사용은 줄어들고, 카드 사용량은 크게 증가했습니다. 카드 추천 서비스도 우후죽순 생겨나고 흔하게 볼 수 있지만, 실제 얼마나 혜택을 받았는지, 왜 이런 카드를 추천 하는지 사용자 입장에서 근거를 알기란 어렵습니다. 대부분 ‘월 최대 얼마 혜택‘ 같은 애매 모호한 문장들과 함께 혜택들을 쉽게 확인할 수 없기 때문입니다.
@@ -39,7 +39,7 @@
  본 프로젝트는 추천받은 카드를 통해 얻을 수 있는 혜택을 사용자 
 입장에서 소비데이터를 기반으로 정확하고 쉽게 보여줌으로써 추천의 근거를 정확하게 사용자에게 전달하고, 적합한 카드를 추천받게 함에 있습니다.
 
-## [관리자]
+## <b>[관리자]</b>
 
   마케팅의 트랜드는 ‘메스 마케팅(소비자 전체를 대상으로 마케팅)’에서 
  ‘타겟 마케팅(특정 소비자층을 겨냥한 마케팅)’으로 변화하고 있습니다. 또한 최근 빅 데이터에 관한 관심이 커지고, 데이터의 양이 방대해지면서 데이터로부터 얻어낼 수 있는 결과물에 대한 관심도도 크게 증가했습니다.  
@@ -62,7 +62,7 @@
 
 <br>
 
-##  데이터의 생성
+##  <b>데이터의 생성</b>
 
 <img src="data_created.png">
  Python의 fakers 라이브러리를 이용해서 약 고객 1만 5천명의 가상의 회원 데이터
@@ -72,14 +72,14 @@
 
 <br>
 
-## 카드 정보 입력
+## <b>카드 정보 입력</b>
 <br>
  하나 카드에서 제공하는 카드 37개를 (신용카드 15종, 체크카드 16종 멀티카드 6종)  
 데이터베이스에 카드 이름, 카드 부연 설명, 카드 혜택, 혜택 가맹점, 연회비, 전월 실적 등을 미리 입력해두었습니다.   데이터를 생성할 때 회원마다 카드를 1개 가진 회원과 2개를 가진 회원을 구분해 카드를 부여했습니다. 그리고 해당 카드의 CVC 번호, 카드 번호, 카드 유효기간 등을 난수를 활용해 부여했습니다. 하나 카드와 제휴된 약 90개의 가맹점들도 등록해 혜택을 계산하는데에 활용했습니다. 
 
 <br>
 
-## 카드의 혜택 계산<br>
+## <b>카드의 혜택 계산</b><br>
 <div style="display:flex; align-items: center; margin-left:120px;">
 <img src="oracle_view.png" style="width:300px; height:200px; margin:5px;"> 
 <img src="oracle.png" style="width:300px; margin:5px;"> 
@@ -92,18 +92,14 @@ PROCEDURE와 CURSOR, FUNCTION, 임시 테이블을 활용해 카드 사용 시 �
 
  <br>  
 
-## 소비 데이터를 기반으로 군집 분석
+## <b>소비 데이터를 기반으로 군집 분석</b>
 <br>
  소비 데이터를 R을 활용해 데이터베이스에서 소비 데이터와 회원정보를 가져와 그 중 
 많이 소비하는 부분인 커피나 요식, 편의점, 대부분이 일회성지출에 그치는 소비 카테고리 (통신,미용 등) 는 제외한 후 CAST 함수를 활용해 행과 열을 변형시켰습니다. 전처리를 진행해 데이터를 가공하고 PCA 로 3개의 축을 사용해 약 0.78 정도의 설명력을 확보한 후에 K-MEANS CLUSTERING을 통해 군집을 형성했습니다. 
 
 <br>
-<br>
 
-<hr>
-
-
-## <center>  ERD </center>   
+## <center> <b>ERD</b> </center>   
    <img src="ERD1.png"/><br>
    <img src="ERD2.png"/><br>
 
@@ -111,7 +107,7 @@ PROCEDURE와 CURSOR, FUNCTION, 임시 테이블을 활용해 카드 사용 시 �
 
 <hr>
 
-## <center> 사용 기술</center>
+## <center> <b>사용 기술</b> </center>
 
 <img src="skill.png">
 
@@ -129,7 +125,7 @@ PROCEDURE와 CURSOR, FUNCTION, 임시 테이블을 활용해 카드 사용 시 �
 
 <hr>
 
-## <center>개발 환경</center> 
+## <center> <b>개발 환경</b> /center> 
 <br>
  *  OS : window 10 <br>
  *  WAS : Tomcat 9.0 <br>
@@ -139,20 +135,20 @@ PROCEDURE와 CURSOR, FUNCTION, 임시 테이블을 활용해 카드 사용 시 �
 
 <hr>
 
-## <center>시스템 아키텍처</center>
+## <center> <b>시스템 아키텍처</b> </center>
 
 <img src="architecture.png">
 
 
 <hr>
 
-# <center>3.프로젝트 결과</center>
+# <center> <b>3.프로젝트 결과</b> </center>
 
 <br>
 
 
   
-### <center><손님></center>
+### <center <b><손님></b> </center>
 <br>
 
 *   개인 맞춤 카드 추천
@@ -232,7 +228,7 @@ socket을 통해서 웹에서 5일 후에 있을 지출 일정에 대한 알림�
 
 <br>
 
-### <center> <관리자> </center>
+### <center> <b><관리자></b> </center>
 
 *  고객 분석 기능
 
@@ -285,20 +281,20 @@ socket을 통해서 웹에서 5일 후에 있을 지출 일정에 대한 알림�
 
 <hr>
 
-# <center>성능 개선</center>
+# <center> <b>성능 개선</b> </center>
 
 <center><img src="quality.png"></center>
 
 <hr>
 
-## <center>시연 동영상</center> 
+## <center> <b>시연 동영상</b> </center> 
 
   <iframe width="424" height="238" src="https://www.youtube.com/embed/reOGfxYJre0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <hr>
 
  
-# <center>5. 본인 소개</center>
+# <center> <b>5. 본인 소개</b> </center>
 
 |이름 |조재희|![조재희](/jaehee34.jpg)|
 |이메일 | jaehee3679(@)daum.net|
