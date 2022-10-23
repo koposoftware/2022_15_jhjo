@@ -263,8 +263,8 @@
 
 *  <b>카드 상품 등록</b>
 <div style="display:flex; align-items: center; margin-left:80px;"> 
-  <img src="tech14.png" style="width:350px; height:200px; margin:5px;">
-  <img src="tech15.png" style="width:350px; height:200px; margin:5px;">
+  <img src="tech14.png" style="width:300px; height:200px; margin:5px;">
+  <img src="tech15.png" style="width:300px; height:200px; margin:5px;">
 </div>
 <br>
 &nbsp;관리자는 카드 상품을 등록할 수 있습니다. 카드 정보에는 카드 이름, 카드 코멘트, 카드 이미지, 연회비, 연회비 타입 등이 입력되며 카드의 혜택에는 제휴 가맹점 약 90개를 선택해서 할인율, 혜택 한도, 한 달 실적 등을 등록할 수 있습니다.  
