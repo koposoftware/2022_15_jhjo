@@ -129,6 +129,7 @@
  *  WAS : Tomcat 9.0 <br>
  *  JDK : java 1.8 <br>
  *  DB : ORACLE 19C (CentOS) <br>
+ *  Tools : STS, Sqldeveloper, Jupyter notebook, Rstudio <br>
 <br>
 
 <hr>
