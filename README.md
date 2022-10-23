@@ -8,7 +8,7 @@
 
 [프로젝트 홈페이지 - https://koposoftware.github.io/2022_15_jhjo/](https://koposoftware.github.io/2022_15_jhjo/)
 
-# <center> 1. 프로젝트 배경 및 목적</center>
+# <center> <b>1. 프로젝트 배경 및 목적</b> </center>
 <hr>
 #  <b>프로젝트 배경</b>
 <div style="display:flex; align-items: center; margin-left:60px;"> 
@@ -51,7 +51,7 @@
 
 <hr>
 
-# <center> 2. 프로젝트 제안서</center>
+# <center> <b>2. 프로젝트 제안서</b> </center>
 
 
 [발표자료<img src="HANAFINDER.png"/>](/하나_FINDER_제안서.pptx)<br>
@@ -59,7 +59,7 @@
 
 <hr>
 
-# 프로젝트 개요
+# <b>프로젝트 개요</b>
 
 <br>
 
