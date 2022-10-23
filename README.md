@@ -1,5 +1,5 @@
 
-# 마이데이터 기반 카드 추천 서비스
+<center># 마이데이터 기반 카드 추천 서비스</center>
 
 <img src="logo.png" style="width:300px;">
 
@@ -7,7 +7,7 @@
 
 [프로젝트 홈페이지 - https://koposoftware.github.io/2022_15_jhjo/](https://koposoftware.github.io/2022_15_jhjo/)
 
-# 1. 프로젝트 배경 및 목적
+# <center> 1. 프로젝트 배경 및 목적</center>
 <hr>
 #  프로젝트 배경
 <div style="display:flex; align-items: center; margin-left:60px;"> 
@@ -50,7 +50,7 @@
 
 <hr>
 
-# 2. 프로젝트 제안서
+# <center> 2. 프로젝트 제안서</center>
 
 
 [발표자료<img src="HANAFINDER.png"/>](/하나_FINDER_제안서.pptx)<br>
@@ -102,9 +102,8 @@ PROCEDURE와 CURSOR, FUNCTION, 임시 테이블을 활용해 카드 사용 시 �
 
 <hr>
 
-## 발표 ppt 
 
-## ERD   
+## <center>  ERD </center>   
    <img src="ERD1.png"/><br>
    <img src="ERD2.png"/><br>
 
@@ -112,7 +111,7 @@ PROCEDURE와 CURSOR, FUNCTION, 임시 테이블을 활용해 카드 사용 시 �
 
 <hr>
 
-# 사용 기술
+## <center> 사용 기술</center>
 
 <img src="skill.png">
 
@@ -130,7 +129,7 @@ PROCEDURE와 CURSOR, FUNCTION, 임시 테이블을 활용해 카드 사용 시 �
 
 <hr>
 
-# 개발 환경 
+## <center>개발 환경</center> 
 <br>
  *  OS : window 10 <br>
  *  WAS : Tomcat 9.0 <br>
@@ -140,33 +139,33 @@ PROCEDURE와 CURSOR, FUNCTION, 임시 테이블을 활용해 카드 사용 시 �
 
 <hr>
 
-# 시스템 아키텍처
+## <center>시스템 아키텍처</center>
 
 <img src="architecture.png">
 
 
 <hr>
 
-# 3.프로젝트 결과
+# <center>3.프로젝트 결과</center>
 
 <br>
 
 
   
-### <손님>
+### <center><손님></center>
 <br>
 
 *   개인 맞춤 카드 추천
 <br>
-      <img src="tech1.png" style="width:500px; margin-left:140px;">
+      <center><img src="tech1.png" style="width:500px;"></center>
       <hr>
-      <img src="tech2.png" style="width:500px; margin-left:140px;">
+      <center><img src="tech2.png" style="width:500px;"></center>
       <hr>
-      <img src="tech16.png" style="margin-left:40px;">
+      <center><img src="tech16.png"></center>
 <div>
-      <img src="tech17.png" style="margin-left:40px;">
+      <center><img src="tech17.png"></center>
       <hr>
-      <img src="tech18.png" style="margin-left:40px;">
+      <center><img src="tech18.png"></center>
 </div>
 
  손님은 3개월 치 소비데이터를 기반으로 신용 카드, 체크 카드, 멀티
@@ -203,7 +202,7 @@ PROCEDURE와 CURSOR, FUNCTION, 임시 테이블을 활용해 카드 사용 시 �
 
 *   혜택 조회
  
-      <img src="tech3.png" style="margin-left:150px">
+      <center><img src="tech3.png"></center>
 
 
 
@@ -213,7 +212,7 @@ PROCEDURE와 CURSOR, FUNCTION, 임시 테이블을 활용해 카드 사용 시 �
 
 *   소비 레포트
 
-      <img src="tech4.png" style="margin-left:150px">
+      <center><img src="tech4.png"></center>
 
  손님은 카드로 사용한 카드별, 금액별, 카테고리별 상세 내역을 확인할 수 있으며, 달 
 평균 소비금액과 소비 성향들 그래프를 통해 전달받을 수 있습니다.  
@@ -221,7 +220,7 @@ PROCEDURE와 CURSOR, FUNCTION, 임시 테이블을 활용해 카드 사용 시 �
 
  * 알림 기능
 <br>
-<img src="tech5.png" style="margin-left:150px">
+<center><img src="tech5.png"></center>
 <div style="display:flex; align-items: center; margin-left:70px;">
   <img src="tech6.png">
   <img src="tech7.png">
@@ -233,14 +232,14 @@ socket을 통해서 웹에서 5일 후에 있을 지출 일정에 대한 알림�
 
 <br>
 
-### <관리자>
+### <center> <관리자> </center>
 
 *  고객 분석 기능
 
     <img src="tech10.png">
     <img src="tech8.png">
-    <div style="margin-left:150px;">
-      <img src="tech9.png">
+    <div>
+      <center><img src="tech9.png"></center>
     </div>
 
  
@@ -256,7 +255,7 @@ socket을 통해서 웹에서 5일 후에 있을 지출 일정에 대한 알림�
 
 
 
-<img src="tech11.png" style="margin-left:160px;">
+<center><img src="tech11.png"></center>
 
 
  우측 상단의 군집을 선택하면 각 군집들의 특징들을 확인할 수 있습니다. 군집의 
@@ -286,20 +285,20 @@ socket을 통해서 웹에서 5일 후에 있을 지출 일정에 대한 알림�
 
 <hr>
 
-# 성능 개선
+# <center>성능 개선</center>
 
-<img src="quality.png">
+<center><img src="quality.png"></center>
 
 <hr>
 
-## 시연 동영상 
+## <center>시연 동영상</center> 
 
   <iframe width="424" height="238" src="https://www.youtube.com/embed/reOGfxYJre0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <hr>
 
  
-# 5. 본인 소개
+# <center>5. 본인 소개</center>
 
 |이름 |조재희|![조재희](/jaehee34.jpg)|
 |이메일 | jaehee3679(@)daum.net|
