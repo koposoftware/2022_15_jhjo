@@ -98,8 +98,8 @@
 <br>
 
 ## <center> <b>ERD</b> </center>   
-   <img src="ERD1.png"/><br>
-   <img src="ERD2.png"/><br>
+   <center><img src="ERD1.png"/><br></center>
+   <center><img src="ERD2.png"/><br></center>
 
 [발표자료<img src="HANAFINDER.png"/><br>](/project.pptx)<br>
 
