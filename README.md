@@ -113,6 +113,7 @@
 
 # 사용 기술
 
+<img src="skill.png" style="margin-left:50%;">
 
  *  Spring-MVC 기반 웹 개발<br>
  *  Python을 활용한 가상의 데이터 생성<br>
@@ -140,7 +141,7 @@
 
 # 시스템 아키텍처
 
-<img src="architecture.png">
+<img src="architecture.png" style="margin-left:50%;">
 
 
 <hr>
