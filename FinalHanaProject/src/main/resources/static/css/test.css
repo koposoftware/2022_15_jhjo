@@ -1,0 +1,19 @@
+@charset "UTF-8";
+.box {
+  position:relative;
+  transition: .5s ease; /* 필수는 아님 */
+ }
+
+.text {
+  position:absolute;
+  visibility:hidden;
+  z-index:1;
+ }
+
+.box:hover {
+  opacity:0.7;
+ }
+
+.box:hover .text {
+   visibility:visible;
+ }    

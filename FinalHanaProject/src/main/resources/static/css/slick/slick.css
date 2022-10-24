@@ -1,0 +1,310 @@
+@charset "UTF-8";
+
+@font-face {
+      src : url("/fonts/HanaB_ttf"); 
+      font-family: "hanaFont";
+}
+@font-face {
+      src : url("/font/Pretendard-ExtraBold.otf"); 
+      font-family: "pretendard";
+}
+
+#slickMyCheckCard{
+	position: relative;	
+	background: linear-gradient(45deg,#EEEEEE 40%, white);
+	margin-top:0;
+}
+.dropdown-item{
+	font-size:20px;
+	font-weight:700;
+	font-family:"hanaFont";
+}
+.post-slider{
+  border:1px solid red;
+}
+.post-slider .post-wrapper{
+  width:84%;
+  height:350px;
+  margin:0px auto;
+  border:1px dashed red;
+  font-family:"hanaFont";
+}
+
+.post-slider .post-wrapper .post{
+  width:300px;
+  height:350px;
+  display:inline-block;
+  background:gray;
+  font-family:"hanaFont";
+ 
+}
+.myCardCollection{
+	 margin-top:10px;
+	 margin-bottom:20px;
+	 width:380px;
+ 	 border-radius:20px 20px 20px 20px;
+ 	 transition-duration:.1s;
+	 opacity:1;	
+	 box-shadow: 0 5px 20px gray;
+}
+
+.myCardCollection:hover{
+	 border-radius:20px 20px 20px 20px;
+ 	 opacity:0.5;
+	 cursor:pointer;
+	 transform:scale(1.80);
+}
+
+#myCardImageDisplay{
+	width:500px;
+	border-radius:20px 20px 20px 20px;
+}
+
+#myInformation{
+	background-color:white;
+	padding:50px;
+	margin:50px;
+	margin-top:90px;
+	width : 400px;
+ 	height: 200px;
+	border-radius:20px 20px 20px 20px;
+}
+#myAccountDisplay{
+	background-color:white;
+	padding:50px;
+	margin:50px;
+	margin-top:90px;
+	width : 400px;
+ 	height: 200px;
+	border-radius:10px 10px 10px 10px;
+}
+
+#recentConsumeAlert{
+	border-radius:10px 10px 10px 10px;
+	background-color:white;
+	width : 800px;
+ 	height:70px;
+ 	font-size:200px;
+ 	font-family: "hanaFont";
+ 	padding:0px;
+ 	box-shadow: 1px 1px 3px 1px #dadce0 inset;
+ 	text-align:center;
+ 	margin-top:50px;
+}
+
+#myrecentConsumeTrandChart{
+	width : 200px;
+ 	height: 100px;
+ 	margin-top: 50px;
+ 	box-shadow: 1px 1px 3px 1px #dadce0 inset;
+ 	border-radius:10px 10px 10px 10px;
+
+}
+
+.Jsidebar{
+	font-family:"hanaFont";
+	font-size:24px;
+	margin-bottom:15px;
+	margin-top:15px;
+	background-color:#E0F8EC;
+	color:black;
+	opacity:0.9;
+	width:10px;
+}
+
+
+.myCardDisplayList{
+	padding-left:8rem;
+	padding-right:8rem;
+	margin-left:24rem;
+	margin-right:8rem;
+	width:900px;
+	
+}
+#container{
+   width : 500px;
+   height: 450px;
+   border-radius:20px 20px 20px 20px;
+   box-shadow: 1px 1px 3px 1px #dadce0 inset;
+   transition-duration:1.0s;   
+}
+#container:hover{
+	transform:scale(1.30);	
+}
+
+#mainSideBar{
+    font-family:"hanaFont";
+	font-size:40px;
+	font-weight:300px;
+}
+
+.box{
+	transition: 1s ease;
+}
+.imtext{
+	font-family:"hanaFont";
+	visibility:hidden;
+}
+.box:hover .imtext{
+	transition: 1s ease;
+	visibility:visible;
+	color:black;
+}
+.box:hover .myCardCollection{
+	 opacity:0.5;
+	 transform:scale(1.10);
+}
+
+.imtext:hover .myCardCollection{
+	 opacity:0.5;
+	 transform:scale(1.10);
+}
+.spendAlert{
+	font-weight:200;
+	font-size:24px;
+}
+
+.slickMyCard{
+	font-family: "hanaFont";
+	background-color:white;
+	border-radius:10px 10px 10px 10px;
+	text-align:center;
+	font-size:25px;
+	box-shadow:1px 1px 1px 1px gray;
+	width:350px;
+	justify-content : center;
+  	align-items : center;
+	display : flex;
+}
+
+#myCardTitle{
+	font-family: "hanaFont";
+	background-color:white;
+	border-radius:8px 8px 8px 8px;
+	text-align:center;
+	width:300px;
+	font-size:24px;
+	box-shadow:2px 2px 2px 2px gray;
+}
+#MyCardRecentUseTitle{
+	text-align:center;
+	width:300px;
+	font-family: "hanaFont";
+	background-color:white;
+	border-radius:3px 3px 3px 3px;
+	font-size:24px;
+	box-shadow:2px 2px 2px 2px gray;
+}
+.recentConsumeTable{
+	width:80%;
+	font-size:16px;
+	background-color:white;
+	font-family: "pretendard";
+	text-align:center;
+}
+
+th thead{
+ 	text-align:center;
+}
+.notificationAboutCard{
+	font-family: "hanaFont";
+	font-size:20px;
+}
+#recentConsumeCheckTableTitle{	
+	font-size:20px;
+	background-color:white;
+	width:300px;
+	border-radius:3px 3px 3px 3px;
+	box-shadow:2px 2px 2px 2px gray;
+	font-family: "hanaFont";
+	margin-bottom:20px;
+}
+#FastWay{
+	border-radius:50%;
+	width:120px;
+	height:120px;
+	position:fixed;
+	top:780px;
+	left:1730px;
+	cursor:pointer;
+	opacity:1.0;
+	transition-duration:1.0s;
+}
+#FastWay:hover{
+	opacity:0.8;
+	transform:scale(1.50);
+}
+
+#slickStartModalButton{ 
+  position:absolute;
+  top:50%; 
+  left:50%;
+  width:120px; 
+  height:30px; 
+  margin-top:-15px; 
+  margin-left:-60px;
+  line-height:15px; 
+  cursor:pointer;
+  display:none;
+}
+
+.slickStartModal{ 
+  position:absolute; 
+  width:100%; 
+  height:200%; 
+  background: rgba(0,0,0,0.6); 
+  top:0; 
+  left:0; 
+  display:none;
+}
+
+.slickStartModal_content{
+  width:600px; 
+  height:350px;
+  background:#fff; 
+  border-radius:10px;
+  position:relative; 
+  top:10%; 
+  left:10%;
+  margin-top:200px; 
+  margin-left:480px;
+  text-align:center;
+  box-sizing:border-box; 
+  padding:30px 0;
+  line-height:23px; 
+  cursor:pointer;
+} 
+#slickAnalysis{
+	width:150px;
+}
+#slickStartModalAlert{
+	font-family: "hanaFont";	
+	font-size:25px;
+	letter-spacing: 2px;
+	word-spacing: 2px;
+	line-height:30px;
+}
+.page-item.active .page-link{
+	background-color:#81D3B9;
+	border-color:white;
+	color:white !important;
+	font-family: "hanaFont";
+	box-shadow:1px 1px 1px 1px gray;
+}
+.paginate_button .page-item{
+	color:black;
+}
+.page-link{
+	font-family: "hanaFont";
+	color:black !important;
+}
+.highcharts-xaxis-labels{
+	font-family: "pretendard";
+	font-size:20px;
+}
+.dataTables_info{
+      font-family: "pretendard";	
+}
+label{
+      font-family: "pretendard";	
+}

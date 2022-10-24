@@ -1,0 +1,241 @@
+@charset "UTF-8";
+@font-face {
+      src : url("/font/HanaB.ttf"); 
+      font-family: "hanaFont";
+}
+@font-face {
+      src : url("/font/HanaM.ttf"); 
+      font-family: "hanaMFont";
+}
+@font-face {
+      src : url("/font/Pretendard-ExtraBold.otf"); 
+      font-family: "pretendard";
+}
+@font-face {
+      src : url("/font/Pretendard-SemiBold.otf"); 
+      font-family: "pretendardsemi";
+}
+
+#cardResister{
+	border:0;
+	outline:0;
+	font-weight:bold;
+	color:white;
+	background-color:#008675;
+	font-family: "pretendard";
+	border-radius: 16px;
+	width: 120px;
+}
+
+#cardResisterImage{
+	width: 100px;
+	margin-right:20px;	
+}
+
+
+.benefitInformation{
+	background-color:white;
+	color:black;
+	border: solid;
+	border-color:#81D3B9;
+	font-family: "pretendard";
+	font-size:16px;
+}
+
+.marketingCard{
+	transform:rotateY(0deg);
+	transition-duration:2s;
+}
+
+.marketingCard:hover{
+	transform: rotateY(-180deg);
+}
+
+.cardFilter.hover{
+	color:black;
+	background-color:white;
+	border: none;
+	border-color:#F0FFFF;
+}
+.cardFilter{
+	color:white;
+	background-color:#81D3B9;
+}
+
+#benefitadd{
+	background-color:#008675;
+	color:white;
+	border:0;
+	outline:0;
+	font-weight:bold;
+	font-family: "pretendard";
+	border-radius: 16px;
+	width: 120px;		
+}
+
+
+.card{
+	font-size:20px;
+	font-family: "pretendard";
+	border:none;
+	outline:0;
+	padding-right: 200px;
+}
+
+#discount{
+	width: 100px;
+}
+
+#uploadCard,#cancleUploadCard{
+	background-color:#008675;
+	color:white;
+	border:0;
+	outline:0;
+	font-weight:bold;
+	color:white;
+	background-color:#008675;
+	font-family: "pretendard";
+	border-radius: 16px;
+	width: 120px;	
+}
+
+#MyCardTitle{
+	font-family: "hanaFont";
+}
+
+
+
+#page-content-wrapper{
+	background-color:#F5F5F5;
+	
+}
+
+
+.myCardViewOneShot{	
+	height:150px;
+}
+
+.myCardCollection{
+	transition-duration:0.4s;
+	opacity:1;
+}
+
+.myCardCollection:hover{
+	opacity:0.2;
+}
+
+.cardSimpleInfo{
+	font-family: "hanaFont";
+	font-size:23px;
+	
+}
+.cardImage{
+	transition-duration:2s;
+	opacity:1;
+}
+
+
+.cardImage:hover{
+	opacity:0.5;
+	cursor:pointer;
+	transform:scale(1.08);
+}
+
+.smallCategory{
+	font-family: "hanaMFont";
+	font-size:20px;
+	background-color:#D7DBDD;
+	border-radius: 5px;
+	color:black;
+}
+
+.aliType{
+	font-family: "hanaMFont";
+	font-size:20px;
+	color:black;
+}
+
+#cardComment{
+	font-family: "hanaFont";
+	border-radius:5px 5px 5px 5px;
+	border:0px 0px 0px 0px;
+	font-size:24px;
+	width:90%;
+
+}
+.cardSectionImage:hover #cardComment{
+	box-shadow: 0 5px 10px gray;
+}
+
+
+.cardSectionImage{
+	width:60%;
+	border-radius:20px 20px 20px 20px;
+	box-shadow: 0 6px 30px gray;
+}
+
+
+.cardSortType{
+	border-radius:5px 5px 5px 5px;
+	box-shadow: 1px 1px 3px 1px #dadce0 inset;
+	width:20%;
+	background-color:white;
+	font-family: "hanaFont";
+}
+.cardSectionCateBtn{
+	color:black;
+	font-size:19px;
+	/* border-color:white; */
+	box-shadow:0px 5px 10px gray; 
+	background-color:#FAFAFA;
+	opacity: 60%;
+	border:none;
+	font-family: "pretendard";
+	line-height:23px;
+	margin:5px; 
+}
+.cardCateSortButton{
+	font-size:22px;
+	box-shadow: 1px 1px 3px 1px #dadce0 inset;
+	border-radius:8px;	
+}
+
+.locateRadius_img_2{
+	border-radius:50%;
+	width:120px;
+	height:120px;
+	position:fixed;
+	top:780px;
+	left:1700px;
+	cursor:pointer;
+	opacity:1.0;
+	transition-duration:1.0s;
+}
+.locateRadius_img_2:hover{
+	opacity:0.8;
+	transform:scale(1.50);
+}
+.cardResisterNotice{
+	font-size:15px;
+	font-family: "pretendard";
+	color:black;
+	margin-left:40px;
+}
+#goResister:hover{
+	color:black;	
+}
+.cardFilterBySortType{
+    font-family: "pretendardsemi";
+	font-size:23px;
+}
+.cardCateSortButton{
+	font-family: "hanaFont";
+	color:white;
+	background-color:#81D3B9;
+	border:0px;
+	font-size:20px;
+}
+.cardCateSortButton:hover{
+	color:black;
+	border:0px;
+}

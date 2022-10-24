@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="kr.ac.kopo.dao.MemberDAO">
+  
+  <resultMap type="kr.ac.kopo.vo.MemberVO" id ="memberMap">
+		<result column="MEMBER_NUM" property="memberNum"/>
+		<result column="IDENTITY" property="identity"/>
+		<result column="NAME" property="name"/>	
+		<result column="PHONE_NUM" property="phoneNumber"/>
+		<result column="ADDRESS" property="address"/>
+		<result column="DOMESTIC_STATUS" property="domesticStatus"/>
+		<result column="USER_TYPE" property="userType"/>
+		<result column="GENDER" property="gender"/>
+		<result column="RES_DATE" property="resDate"/>	
+		<result column="EMAIL_ADDRESS" property="emailAddress"/>	
+  </resultMap>
+  
+  <resultMap type="kr.ac.kopo.vo.CardRankVO" id="cardRankMap">
+		<result column="CARD_CATE_NUM" property="cardCateNum"/>  	
+		<result column="BENEFIT" property="cardBenefit"/>  
+ 		<result column="CARD_IMG_URL" property="cardImgUrl"/>
+ 		<result column="CARD_ANNUAL" property="cardAnnualFee"/> 
+ 		<result column="CARD_NAME" property="cardName"/> 
+  </resultMap>
+  
+  <resultMap type="kr.ac.kopo.vo.RecommendedCardBenefitVO" id="cardBenefitMap">
+		<result column="SMALL_CATE" property="smallCate"/>
+		<result column="BENEFIT" property="cardBenefit"/>
+  </resultMap>
+  
+  <resultMap type="kr.ac.kopo.vo.MultiCardRankVO" id="multiCardRankMap">
+  		<result column="FIRST_MULTI_CARD_CATE_NUM" property="firstMultiCardCateNum"/>
+  		<result column="SECOND_MULTI_CARD_CATE_NUM" property="secondMultiCardCateNum"/>
+  		<result column="FIRST_MULTI_CARD_IMG_URL" property="firstMultiCardImgUrl"/>
+  		<result column="SECOND_MULTI_CARD_IMG_URL" property="secondMultiCardImgUrl"/>
+  		<result column="FIRST_MULTI_CARD_NAME" property="firstMultiCardName"/>
+  		<result column="SECOND_MULTI_CARD_NAME" property="secondMultiCardName"/>
+  		<result column="FIRST_MULTI_CARD_COMMENT" property="firstMultiCardComment"/>
+  		<result column="SECOND_MULTI_CARD_COMMENT" property="secondMultiCardComment"/>
+  		<result column="OBTAINED_BENEFIT" property="obtainedBenefit"/>
+  		<result column="FIRST_BENEFIT" property="firstBenefit"/>
+  		<result column="SECOND_BENEFIT" property="secondBenefit"/>
+  </resultMap>
+  
+  <resultMap type="kr.ac.kopo.vo.CartBenefitVO" id="cartBenefitMap">
+ 		<result column="CART_BENEFIT" property="cartBenefit"/> 	
+  </resultMap>
+   
+  <resultMap type="kr.ac.kopo.vo.CalendarVO" id="calendarMap">
+		<result column="ID" property="id"/>
+		<result column="GROUP_ID" property="groupId"/>
+		<result column="TITLE" property="title"/>
+  		<result column="WRITER" property="writer"/>
+		<result column="CONTENT" property="content"/>
+		<result column="START_1" property="start"/>
+		<result column="END_1" property="end"/>
+		<result column="ALL_DAY" property="allDay"/>
+		<result column="TEXT_COLOR" property="textColor"/>
+		<result column="BACKGROUND_COLOR" property="backgroundColor"/>
+		<result column="BORDER_COLOR" property="borderColor"/>
+  </resultMap>
+  
+  
+  	<select id ="login" parameterType="MemberVO" resultMap="memberMap">
+  		SELECT * FROM CUSTOMER_INFO
+  		WHERE EMAIL_ADDRESS=#{emailAddress} AND PASSWORD=#{password}
+  	</select> 
+  	<select id ="recommendedCheckCardRank" statementType="CALLABLE" parameterType="map">
+  		{CALL CALC_CHECK_BENEFIT_RANK(${memberNum},#{checkCardRankList,mode=OUT,jdbcType=CURSOR,javaType=ResultSet,resultMap=cardRankMap})}
+  	</select> 
+  	<select id ="recommendedCreditCardRank" statementType="CALLABLE" parameterType="map">
+  		{CALL CALC_CREDIT_BENEFIT_RANK(${memberNum},#{creditCardRankList,mode=OUT,jdbcType=CURSOR,javaType=ResultSet,resultMap=cardRankMap})}
+  	</select>
+  	<select id ="recommendedCardBenefit" statementType="CALLABLE" parameterType="map">
+  		{CALL CALC_RECOMMENDED_BENEFIT(${memberNum},#{cardCateNum}, #{recommendedCardBenefitList,mode=OUT,jdbcType=CURSOR,javaType=ResultSet,resultMap=cardBenefitMap})}
+  	</select>
+  	
+  	<select id ="calcBenefitInMyCart" statementType="CALLABLE" parameterType="map">
+  		{CALL CALC_RECOMMENDED_BENEFIT_SUM(${memberNum},#{cardCateNum}, #{recommendedCardBenefitList,mode=OUT,jdbcType=CURSOR,javaType=ResultSet,resultMap=cartBenefitMap})}
+  	</select> 
+  	 
+  	<select id="showSelectedCardBene" statementType="CALLABLE" parameterType="map">
+   		{CALL CALC_SELECTED_CARD_BENEFIT(${memberNum},#{cardNum},#{cardCateNum},#{obtainedBenefitList,mode=OUT,jdbcType=CURSOR,javaType=ResultSet,resultMap=cardBenefitMap})}
+   	</select>
+   	
+   	<insert id="addSelectedCardIntoCart" parameterType="map">
+   	 	INSERT INTO CARD_CART(MEMBER_NUM,WISH_CARD) VALUES(${memberNum},#{cardCateNum})
+   	</insert>
+   	
+   	<select id="showMyCardCart" parameterType="int" resultType="map">
+		SELECT CARD_NAME,IMG_URL,B.CARD_CATE_NUM,D.COMMENT_OF_CARD FROM 
+		CARD_CART A,CARD_IMG B,CARD_INFO C,CARD_COMMENT D
+		WHERE A.WISH_CARD = B.CARD_CATE_NUM AND A.WISH_CARD = C.CARD_CATE_NUM AND A.WISH_CARD = D.CARD_CATE_NUM AND MEMBER_NUM=${memberNum}
+		GROUP BY CARD_NAME,IMG_URL,B.CARD_CATE_NUM,D.COMMENT_OF_CARD 	
+   	</select>
+   	
+   	<delete id="deleteMyWishedCard" parameterType="map">
+   		DELETE 
+   		FROM CARD_CART
+   		WHERE MEMBER_NUM = ${memberNum} AND WISH_CARD = #{cardCateNum}
+   	</delete>
+	
+	<select id="showMyAccount" parameterType="int" resultType="map"> 
+		SELECT *
+		FROM ACCOUNT
+		WHERE MEMBER_NUM=${memberNum}		
+	</select>
+	<select id="getCardImgFromAccount" parameterType="map" resultType="string">
+		SELECT IMG_URL FROM CARD_IMG WHERE CARD_CATE_NUM=(
+		SELECT CARD_CATE_NUM FROM CARD_INFO WHERE CARD_SEG_NUM=(
+		SELECT CARD_SEG_NUM FROM CUSTOMER_CARD_INFO WHERE CARD_NUM=(
+		SELECT CARD_NUMBER FROM ACCOUNT WHERE MEMBER_NUM=${memberNum} AND ACCOUNT_NUMBER = '${accountNum}')))
+	</select>
+	<select id="getMyCalendar" parameterType="int" resultMap="calendarMap">
+		SELECT 
+		ID,TITLE,WRITER,CONTENT,
+		TO_CHAR(TO_DATE(START_1,'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS') AS START_1,
+		ALL_DAY,TEXT_COLOR,BACKGROUND_COLOR,BORDER_COLOR 
+		FROM CALENDAR WHERE GROUP_ID = ${memberNum}
+	</select>
+	<insert id="addMyTodoList" parameterType="map">
+		INSERT INTO 
+		CALENDAR(GROUP_ID,TITLE,WRITER,CONTENT,START_1,END_1,ALL_DAY,TEXT_COLOR,BACKGROUND_COLOR,BORDER_COLOR)
+		VALUES 
+		(${memberNum},#{title},#{writer},#{content},'${start}','${end}',#{allDay},#{textColor},#{backgroundColor},#{borderColor})
+	</insert>
+	
+	<select id="displayTodoList" parameterType="int" resultType="map">
+		SELECT TITLE,CONTENT,START_1 FROM CALENDAR WHERE
+		TO_DATE(START_1,'YYYY-MM-DD HH24:MI:SS')
+		BETWEEN SYSDATE AND SYSDATE+5
+		AND
+		GROUP_ID = ${memberNum}
+		ORDER BY START_1	
+	</select>
+	
+	<update id="updateReadStatus" parameterType="int">
+		UPDATE CALENDAR 
+		SET READ_STATUS = 'Y' 
+		WHERE GROUP_ID=${memberNum} AND TO_DATE(START_1,'YYYY-MM-DD HH24:MI:SS')
+		BETWEEN SYSDATE AND SYSDATE+5
+	</update>
+	  	 
+  	<select id="showMultiCardBenefit" statementType="CALLABLE" parameterType="map">
+   		{CALL CALC_MULTI_CARD_RANK(${memberNum},#{multiCardBenefitList,mode=OUT,jdbcType=CURSOR,javaType=ResultSet,resultMap=multiCardRankMap})}
+   	</select>
+	
+	<select id="recommendedCardInSameAge" parameterType="int" resultType="map">		
+		SELECT DISTINCT A.IMG_URL, A.CARD_NAME,B.CARD_OWNER,SORT_CARD 
+		FROM CARD_IMG_BENE_INFORMATION A,
+		(SELECT COUNT(*) AS CARD_OWNER,CARD_SEG_NUM
+		FROM CUSTOMER_CARD_INFO A,
+		(SELECT MEMBER_NUM 
+		FROM CUSTOMER_INFO
+		WHERE TO_NUMBER('20'||SUBSTR(TO_DATE(SYSDATE,'YYYY-MM-DD HH24:MI:SS'),0,2)) - TO_NUMBER('19'||SUBSTR(IDENTITY,0,2))+1 BETWEEN ${age} AND ${age}+10
+		ORDER BY MEMBER_NUM) B 
+		WHERE B.MEMBER_NUM = A.MEMBER_NUM
+		GROUP BY CARD_SEG_NUM
+		ORDER BY CARD_OWNER) B
+		WHERE A.CARD_SEG_NUM = B.CARD_SEG_NUM
+		ORDER BY B.CARD_OWNER DESC
+	</select>
+	
+	<select id="recommendedCardInCluster" parameterType="int" resultType="map">		
+		SELECT DISTINCT A.IMG_URL, A.CARD_NAME,B.CARD_OWNER,SORT_CARD 
+		FROM CARD_IMG_BENE_INFORMATION A,
+		(SELECT COUNT(*) AS CARD_OWNER,CARD_SEG_NUM
+		FROM 
+		CUSTOMER_CARD_INFO A,
+		(SELECT MEMBER_NUM 
+		FROM CLUSTERED_CUSTOMER 
+		WHERE CLUSTERED = 
+		(SELECT CLUSTERED 
+		FROM CLUSTERED_CUSTOMER 
+		WHERE MEMBER_NUM = ${memberNum})) B
+		WHERE A.MEMBER_NUM = B.MEMBER_NUM
+		GROUP BY CARD_SEG_NUM) B
+		WHERE A.CARD_SEG_NUM = B.CARD_SEG_NUM
+		ORDER BY B.CARD_OWNER DESC 
+	</select>
+	
+ 
+  </mapper>

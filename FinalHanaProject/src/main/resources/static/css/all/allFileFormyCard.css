@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+@font-face {
+      src : url("/font/HanaB.ttf"); 
+      font-family: "hanaFont";
+}
+
+
+
+section{
+	min-height:1500px;
+	background-color:#F5F5F5;
+}
+
+#navFix{
+	 position: sticky;
+	 top: 0;
+}
+
+#carouselBackground{
+	background-color:#F5F5F5;
+}
+
+.carousel-inner > .carousel-item > img {
+  width:50%;
+  height:100px;
+}
+
+#card_background_video{
+  height:400px;
+}
+
+
+#preview{
+	width: 300px;
+	height: 200px;
+	display: none;
+}
+
+
+
+#navbarCollapse{
+	font-size:18px;
+}
+
+
+#navBtn{
+	color:white;
+	background-color:#008675;	
+	border-radius: 8px;
+	outline:0;
+	border: 0;
+    font-family: "hanaFont";
+	font-size:18px;
+	font-weight:700;
+}
+#navBtn:hover{
+	color:black;
+	outline:0;
+	border: 0;
+} 
+
+
+.barndNav{
+	font-family: "hanaFont";
+	font-weight:700;
+	font-size:12px;
+}
+
+
+.dropdown-item{
+	font-family: "hanaFont";
+	font-weight:700;
+	width:800px;
+}

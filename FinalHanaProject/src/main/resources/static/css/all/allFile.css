@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+@font-face {
+      src : url("/font/HanaB.ttf"); 
+      font-family: "hanaFont";
+}
+@font-face {
+      src : url("/font/Pretendard-ExtraBold.otf"); 
+      font-family: "pretendard";
+}
+
+
+section{
+	min-height:2200px;
+	background: linear-gradient(135deg,white 80%, #E0F7FA 100%);
+}
+
+#navFix{
+	 position: sticky;
+	 top: 0;
+}
+
+#carouselBackground{
+	background-color:#F5F5F5;
+}
+
+.carousel-inner > .carousel-item > img {
+  width:100%;
+  height:600px;
+}
+
+#card_background_video{
+  height:400px;
+}
+
+
+#preview{
+	width: 300px;
+	height: 200px;
+	display: none;
+}
+
+
+
+#navbarCollapse{
+	font-size:20px;
+}
+
+
+#navBtn{
+	color:white;
+	background-color:#008675;	
+	border-radius: 8px;
+	outline:0;
+	border: 0;
+    font-family: "hanaFont";
+	font-size:18px;
+	font-weight:700;
+}
+
+#navBtn:hover{
+	color:black;
+	outline:0;
+	border: 0;
+} 
+
+
+.barndNav{
+	font-family: "hanaFont";
+	font-weight:700;
+	font-size:14px;
+}
+
+
+.dropdown-item{
+	font-family: "pretendard" !important;
+	font-weight:800;
+	font-size:20px !important;
+}
+#alertRed{
+	width: 25px;
+	height: 25px;
+	background-color:red;
+	display:flex;
+	justify-content:center;
+	color: white;
+	align-items:center;
+	border-radius: 50%;
+	transform: translateY(-30%), translateX(-20%);
+}
+#modalButtonForTodoListSocket{
+	position:absolute; top:50%; left:50%;
+  	width:120px; height:30px; margin-top:-15px; margin-left:-60px;
+  	line-height:15px; cursor:pointer;
+  	display:none;
+}
+.modalTodoListSocket{
+	  position:absolute;
+	  width:100%; 
+	  height:300%; 
+	  background: rgba(0,0,0,0.0); 
+	  top:0; 
+	  left:0; 
+	  display:none;
+}
+.modal_contentTodoListSocket{
+	background-color:#EFEBE9;
+	z-index:2;
+  	width:400px; 
+  	height:350px;
+  	border-radius:10px;
+  	position:relative; 
+  	margin-top:220px; 
+  	margin-left:1400px;
+  	text-align:center;
+  	box-sizing:border-box; 
+  	padding:10px 0;
+  	line-height:23px; 
+  	cursor:pointer;
+}

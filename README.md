@@ -294,14 +294,23 @@
 
 <hr>
 
-# <center> <b>5. 시연 동영상</b> </center> 
+# <center> <b>5. 발표 PPT</b> </center> 
+
+[발표자료<img src="HANAFINDER.png"/><br>](/2260341020_조재희.pptx)<br>
+
+<hr>
+
+
+# <center> <b>6. 시연 동영상</b> </center> 
 <center>
  <a href="https://youtu.be/tLBiA-JInXY"><img src="index.png"></a>
 </center>
 <hr>
 
+
+
  
-# <center> <b>6. 본인 소개</b> </center>
+# <center> <b>7. 본인 소개</b> </center>
 
 |이름 |조재희|![조재희](/jaehee34.jpg){:width="60%"}|
 |이메일 | jaehee3679(@)daum.net|

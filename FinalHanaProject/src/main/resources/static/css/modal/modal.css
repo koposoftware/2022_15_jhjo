@@ -1,0 +1,415 @@
+@charset "UTF-8";
+
+@font-face {
+      src : url("/font/HanaB.ttf"); 
+      font-family: "hanaFont";
+}
+@font-face{
+	  src : url("/font/HanaL.ttf"); 
+	  font-family:"hanaLFont";
+}
+@font-face {
+      src : url("/font/HanaM.ttf"); 
+      font-family: "hanaMFont";
+}
+
+@font-face {
+      src : url("/font/Pretendard-ExtraBold.otf"); 
+      font-family: "pretendard";
+}
+
+#modalCardResisterbutton{ 
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:120px;
+  height:30px; 
+  margin-top:-15px; 
+  margin-left:-60px;
+  line-height:15px; 
+  cursor:pointer;
+  display:none;
+}
+
+#modalResister{ 
+  position:absolute; 
+  width:100%; 
+  height:100%; 
+  background: rgba(0,0,0,0.8); 
+  top:0; 
+  left:0; 
+  display:none;
+}
+
+#modalCardContainer{
+  width:400px;
+  height:200px;
+  background:#fff; 
+  border-radius:10px;
+  position:relative; 
+  top:50%;
+  left:50%;
+  margin-top:-100px; 
+  margin-left:-200px;
+  text-align:center;
+  box-sizing:border-box; 
+  padding:0px 0;
+  line-height:23px; 
+  cursor:pointer;
+  font-size:18px;
+}
+
+
+#goResister{
+	background-color:#008675;
+	color:white;
+	border:0;
+	outline:0;
+	font-weight:bold;
+	font-family: "hanaFont";
+	border-radius:12px;
+	width: 120px;	
+	box-shadow: 1px 1px 3px 1px #dadce0 inset; 
+	font-size:20px;
+}
+
+#goResister:hover{
+	background-color:white;
+	color:black;
+	border:0;
+	outline:0;
+	font-weight:bold;
+	font-family: "hanaFont";
+	width: 120px;	
+}
+
+#benefitGround{
+	width: 300px;
+}
+
+#cardResisterAlert{
+	margin:0;
+	padding:0;
+	background-color:#008675;
+	width:400px;
+	height:30px;
+	border-radius:10px 10px 0px 0px;
+}
+
+#cardModalAlert{
+	font-weight:bold;
+ 	font-family: "pretendard";
+	font-size:22px;
+}
+
+#detailmodalResister{
+  	position:absolute; 
+  	width:100%; 
+  	height:100%; 
+  	background: rgba(0,0,0,0.6); 
+  	top:0; 
+  	bottom:0;
+  	left:0; 
+  	display:none;
+  	box-shadow: 30px 30px 30px 30px gray;
+}
+#detailCardContainer{
+	background-color:white;
+  	width:1200px;
+ 	height:1900px;
+  	border-radius:10px;
+  	position:relative; 
+  	left:50%;
+  	margin-top:800px; 
+  	margin-left:-600px;
+  	text-align:center;
+  	box-sizing:border-box; 
+  	padding:0px 0;
+  	line-height:23px; 
+  	cursor:pointer;
+  	font-size:18px;
+  	z-index: 1050;
+  	box-shadow: 3px 3px 3px 3px gray;	
+}
+
+#detailcardResisterAlert{
+	margin:0;
+	margin-bottom:20px;
+	padding:30px;
+	background-color:#008675;
+	width:1200px;
+	/* height:60px; */
+	border-radius:10px 10px 0px 0px;
+	font-family:"hanaFont";
+	font-size:18px;
+}
+#detailCardTitleInModal{
+	font-family: "pretendard";
+	font-size:35px;
+	color:black;
+}
+#detailCardComment{
+	color:black;
+	font-family:"hanaFont";
+	font-size:25px;
+}
+
+.detailNetworkImg{
+	width: 90px;
+	height: 60px;
+	
+}
+
+.bene_limit{
+    font-family: "pretendard";
+	font-size:18px;
+}
+.discount{
+	font-size:18px;	
+}
+
+#commentOfCard{
+	margin-top:10px;
+    font-family: "pretendard";
+	font-size:24px;
+	text-align: center;
+	line-height:50px; 
+}
+
+.cardCategory{
+	font-family: "pretendard";
+	font-size:18px;
+	text-align: center;
+}
+
+th, td {
+  text-align: center;
+  vertical-align : middle;
+}
+.cardTableInfo{
+	color:black;
+	font-family: "pretendard";
+	font-size:18px !important;
+}
+#cardInfoTable{
+	font-size:18px !important;
+	width:95%;
+	border-radius:20px 20px 20px 20px;
+	line-height:40px; 
+}
+.aliType{
+	font-family: "pretendard";
+	font-size:18px;	
+}
+
+.aliImageInModal{
+	width:100px;	
+}
+
+#cardImageInModal{
+	width:420px;
+	transition-duration:0.8s;
+	border-radius:20px 20px 20px 20px;
+	box-shadow: 0px 5px 20px gray;
+	
+}
+#cardImageInModal:hover{
+	opacity:0.8;
+	transform:scale(1.05);
+}
+.adminResisterCard{
+	 font-family: "pretendard";
+	 font-size:35px;	
+}
+.addSelectedCardInCardSection{
+	 font-family: "pretendard";
+	 font-size:22px;
+	 box-shadow: 1px 1px 3px 1px #dadce0 inset;	
+	 width:180px;
+	 height:40px;
+	 border-radius:10px;
+	 color:white;
+  	 background-color:#81D3B9;	
+	 transition-duration:0.4s;	
+}
+.addSelectedCardInCardSection:hover{
+	 color:black;
+	 background-color:white; 
+	 opacity:0.8;
+}
+
+#addCartNoticeModalButton{
+  position:absolute; 
+  top:0%; 
+  left:50%;
+  width:120px; 
+  height:30px; 
+  margin-top:30px; 
+  margin-left:-60px;
+  line-height:15px; 
+  cursor:pointer;
+  display:none;
+}
+
+.addCartNoticeModalInSection{ 
+  position:absolute; 
+  width:100%; 
+  height:300%; 
+  background: rgba(0,0,0,0.9); 
+  top:0; 
+  left:0; 
+  display:none;
+}
+
+.addCartNoticeModal_contentInSection{
+  width:400px; 
+  height:300px;
+  background:#fff; 
+  border-radius:10px;
+  position:relative; 
+  top:0%; 
+  left:50%;
+  margin-top:1500px; 
+  margin-left:-200px;
+  text-align:center;
+  box-sizing:border-box; 
+  padding:10px 0; 
+  cursor:pointer;
+  font-family: "hanaFont";
+  font-size:32px; 
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  line-height:40px;
+}
+.addCartNoticeModalImage{
+	width:180px;
+}
+.cardSectionAliParentImage{
+	width: 65px;	
+	height: 65px;	
+	border-radius: 50%;
+	background-color: #F5F5F5;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin-left: 25px;	
+	transition-duration:0.8s;
+	margin-right: 25px;
+}
+.cardSectionAliParentImage:hover{
+	opacity:0.8;
+	transform:scale(1.20);	
+}
+
+.cardSectionAliIcon{
+	transition-duration:0.8s;
+	width:65px;
+}
+
+.cardSectionAliIcon:hover{
+	opacity:0.8;
+	transform:scale(1.20);
+}
+
+
+/*switch 버튼 만들기  */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  vertical-align:middle;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+	background-color:#81D3B9;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.detailBenefitListAboutBasePerform{
+	font-family: "pretendard";	
+	font-size:18px;
+}
+#checkBasePerform {
+	color:black;
+	font-family: "pretendard";
+	margin:0px;
+	display:inline-block;
+	font-size:18px;
+	font-weight:bold;
+}
+.switchDetailBasePerform{
+	display:flex;
+	justify-content:center;
+	align-items:center;	
+}
+.lastMonthPerformTable{
+	font-family: "pretendard";
+	width:85%;
+	color:black;
+	display:none;
+}
+.cardDetailTypeCardSectionInModal{
+	 background-color:white;
+	 box-shadow: 1px 1px 3px 1px #dadce0 inset;
+	 width:30%;
+	 padding:8px 10px;
+	 font-size:20px;
+	 color:black;	
+}
+.detailMultiCardDescription{
+	font-family: "pretendard";
+	font-size:16px;	
+	margin-left:100px;
+}
+.cardDetailDescriptionInModal{
+	font-family: "pretendard";
+	font-size:36px;
+}
